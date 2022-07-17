@@ -1,26 +1,5 @@
 @[Link(ldflags: "`mecab-config --libs`")]
 lib LibMeCab
-  struct DictionaryInfoT
-    # filename of dictionary
-    # On Windows, filename is stored in UTF-8 encoding
-    filename : LibC::Char*
-    # character set of the dictionary. e.g., "SHIFT-JIS", "UTF-8"
-    charset : LibC::Char*
-    # How many words are registered in this dictionary.
-    size : LibC::UInt
-    # dictionary type
-    # this value should be MECAB_USR_DIC, MECAB_SYS_DIC, or MECAB_UNK_DIC.
-    type : LibC::Int
-    # left attributes size
-    lsize : LibC::UInt
-    # right attributes size
-    rsize : LibC::UInt
-    # version of this dictionary
-    version : LibC::UShort
-    # pointer to the next dictionary info.
-    next : DictionaryInfoT*
-  end
-
   # Normal node defined in the dictionary.
   NorNode = 0_i64
   # Unknown node not defined in the dictionary.
@@ -129,7 +108,7 @@ lib LibMeCab
   # C wrapper of MeCab::Tagger::formatNode(const Node *node)
   fun format_node = mecab_format_node(mecab : T*, node : Wakame::Lib::MeCabNodeT*) : LibC::Char*
   # C wrapper of MeCab::Tagger::dictionary_info()
-  fun dictionary_info = mecab_dictionary_info(mecab : T*) : DictionaryInfoT*
+  fun dictionary_info = mecab_dictionary_info(mecab : T*) : Wakame::Lib::DictionaryInfoT*
   # C wrapper of MeCab::createLattice()
   fun lattice_new = mecab_lattice_new : LatticeT*
   # C wrapper of MeCab::deleteLattice(lattice)
@@ -215,7 +194,7 @@ lib LibMeCab
   # C wrapper of MeCab::Model::swap()
   fun model_swap = mecab_model_swap(model : ModelT*, new_model : ModelT*) : LibC::Int
   # C wapper of MeCab::Model::dictionary_info()
-  fun model_dictionary_info = mecab_model_dictionary_info(model : ModelT*) : DictionaryInfoT*
+  fun model_dictionary_info = mecab_model_dictionary_info(model : ModelT*) : Wakame::Lib::DictionaryInfoT*
   # C wrapper of MeCab::Model::transition_cost()
   fun model_transition_cost = mecab_model_transition_cost(model : ModelT*, rc_attr : LibC::UShort, lc_attr : LibC::UShort) : LibC::Int
   # C wrapper of MeCab::Model::lookup()
