@@ -22,8 +22,8 @@ module Wakame
       to: Lib::MeCabNodeT
     )
     enum_methods(
-      nor_node?, unkr_node?, bosr_node?,
-      eosr_node?, eonr_node?,
+      nor_node?, unk_node?, bos_node?,
+      eos_node?, eon_node?,
       of: stat
     )
 
