@@ -8,7 +8,7 @@ module Wakame
       raise WakameError.new(message)
     end
 
-    getter model, mecab, lattice
+    getter model, tagger, lattice, libpath, options, dicts, version
 
     def self.new(**option_args)
       options = Options.new(**option_args)
@@ -36,6 +36,12 @@ module Wakame
       LibMeCab.lattice_add_request_type(@lattice, LibMeCab::AllocateSentence) if @options.allocate_sentence
 
       LibMeCab.lattice_set_theta(@lattice, @options.theta.not_nil!) if @options.theta
+
+      @dicts = [] of DictionaryInfo
+      @dicts << DictionaryInfo.new(LibMeCab.model_dictionary_info(@model))
+      while @dicts.last.next
+        @dicts << DictionaryInfo.new(@dicts.last.next)
+      end
 
       @version = LibMeCab.version
     end
