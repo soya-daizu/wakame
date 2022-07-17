@@ -18,9 +18,9 @@ module Wakame
       {% end %}
     end
 
+    getter surface, feature
     forward_missing_to @pointer.value
     define_stat_method nor, unk, box, eos, eon
-    getter surface, feature
 
     def is_best?
       isbest == 1

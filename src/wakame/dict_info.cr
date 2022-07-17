@@ -8,9 +8,9 @@ module Wakame
       {% end %}
     end
 
+    getter filename, charset
     forward_missing_to @pointer.value
     define_type_method usr, sys, unk
-    getter filename, charset
 
     def initialize(@pointer : Lib::DictionaryInfoT*)
       value = @pointer.value
