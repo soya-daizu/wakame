@@ -10,10 +10,14 @@ module Wakame
 
     getter model, mecab, lattice
 
-    def initialize(**options)
+    def self.new(**option_args)
+      options = Options.new(**option_args)
+      self.new(options)
+    end
+
+    def initialize(@options : Options)
       @tagger = uninitialized LibMeCab::T*
 
-      @options = Options.new(**options)
       opt_str = @options.build_str
 
       @model = LibMeCab.model_new2(opt_str)
