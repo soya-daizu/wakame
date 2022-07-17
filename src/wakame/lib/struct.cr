@@ -19,7 +19,7 @@ module Wakame
       # version of this dictionary
       getter version : LibC::UShort
       # pointer to the next dictionary info.
-      getter next : DictionaryInfoT*
+      getter next : Wakame::Lib::DictionaryInfoT*
 
       # :nodoc:
       def initialize(@filename, @charset, @size, @type, @lsize, @rsize,
@@ -30,13 +30,13 @@ module Wakame
     @[Extern]
     struct MeCabPathT
       # pointer to the right node
-      getter rnode : MeCabNodeT*
+      getter rnode : Wakame::Lib::MeCabNodeT*
       # pointer to the next right path
-      getter rnext : MeCabPathT*
+      getter rnext : Wakame::Lib::MeCabPathT*
       # pointer to the left node
-      getter lnode : MeCabNodeT*
+      getter lnode : Wakame::Lib::MeCabNodeT*
       # pointer to the next left path
-      getter lnext : MeCabPathT*
+      getter lnext : Wakame::Lib::MeCabPathT*
       # local cost
       getter cost : LibC::Int
       # marginal probability
@@ -54,19 +54,19 @@ module Wakame
     @[Extern]
     struct MeCabNodeT
       # pointer to the previous node.
-      getter prev : MeCabNodeT*
+      getter prev : Wakame::Lib::MeCabNodeT*
       # pointer to the next node.
-      getter next : MeCabNodeT*
+      getter next : Wakame::Lib::MeCabNodeT*
       # pointer to the node which ends at the same position.
-      getter enext : MeCabNodeT*
+      getter enext : Wakame::Lib::MeCabNodeT*
       # pointer to the node which starts at the same position.
-      getter bnext : MeCabNodeT*
+      getter bnext : Wakame::Lib::MeCabNodeT*
       # pointer to the right path.
       # this value is NULL if MECAB_ONE_BEST mode.
-      getter rpath : MeCabPathT*
+      getter rpath : Wakame::Lib::MeCabPathT*
       # pointer to the right path.
       # this value is NULL if MECAB_ONE_BEST mode.
-      getter lpath : MeCabPathT*
+      getter lpath : Wakame::Lib::MeCabPathT*
       # surface string.
       # this value is not 0 terminated.
       # You can get the length with length/rlength members.

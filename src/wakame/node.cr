@@ -1,29 +1,38 @@
+require "./lib/*"
+require "./wrapping_struct"
+
 module Wakame
-  # Wrapper for the `Wakame::Lib::MeCabNodeT` structure holding the parsed node.
-  #
-  # Access to any missing attributes will be forwarded to the underlying `Wakame::Lib::MeCabNodeT`.
-  # For example, if you want to get the `id` of the node, you can do so by simply trying to access
-  # its member as you normally do with typical objects:
-  # ```
-  # node = MeCabNode.new(node_ptr)
-  # node.id # => 91
-  # ```
-  # For the available attributes, see the documentation of `Wakame::Lib::MeCabNodeT`.
+  # Wrapper for the `Wakame::Lib::MeCabNodeT` structure holding attributes of the parsed node.
   struct MeCabNode
-    macro define_stat_method(*names)
-      {% for name in names %}
-        def is_{{name.id}}?
-          stat == LibMeCab::{{name.id.capitalize}}Node
-        end
-      {% end %}
+    include WrappingStruct
+
+    enum Stat
+      NorNode = LibMeCab::NorNode
+      UnkNode = LibMeCab::UnkNode
+      BosNode = LibMeCab::BosNode
+      EosNode = LibMeCab::EosNode
+      EonNode = LibMeCab::EonNode
     end
 
     getter surface, feature
-    forward_missing_to @pointer.value
-    define_stat_method nor, unk, box, eos, eon
+    delegate_getters(
+      prev, "next", enext, bnext, rpath, lpath,
+      id, length, rlength, rc_attr, lc_attr, posid,
+      char_type, alpha, beta, prob, wcost, cost,
+      to: Lib::MeCabNodeT
+    )
+    enum_methods(
+      nor_node?, unkr_node?, bosr_node?,
+      eosr_node?, eonr_node?,
+      of: stat
+    )
 
-    def is_best?
-      isbest == 1
+    def stat : Stat
+      Stat.new(@pointer.value.stat)
+    end
+
+    def is_best? : Bool
+      @pointer.value.isbest == 1
     end
 
     def initialize(@pointer : Lib::MeCabNodeT*)

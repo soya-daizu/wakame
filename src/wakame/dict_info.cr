@@ -1,16 +1,29 @@
+require "./lib/*"
+require "./wrapping_struct"
+
 module Wakame
   struct DictionaryInfo
-    macro define_type_method(*names)
-      {% for name in names %}
-        def is_{{name.id}}dic?
-          type == LibMeCab::{{name.id.capitalize}}Dic
-        end
-      {% end %}
+    include WrappingStruct
+
+    enum Type
+      SysDic = LibMeCab::SysDic
+      UsrDic = LibMeCab::UsrDic
+      UnkDic = LibMeCab::UnkDic
     end
 
     getter filename, charset
-    forward_missing_to @pointer.value
-    define_type_method usr, sys, unk
+    delegate_getters(
+      size, lsize, rsize, version, "next",
+      to: Lib::DictionaryInfoT
+    )
+    enum_methods(
+      usr_dic?, sys_dic?, unk_dic?,
+      of: type
+    )
+
+    def type : Type
+      Type.new(@pointer.value.type)
+    end
 
     def initialize(@pointer : Lib::DictionaryInfoT*)
       value = @pointer.value
