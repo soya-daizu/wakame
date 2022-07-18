@@ -14,7 +14,7 @@ module Wakame
       EonNode = LibMeCab::EonNode
     end
 
-    getter surface, feature
+    getter surface, feature, stat
     delegate_getters(
       prev, "next", enext, bnext, rpath, lpath,
       id, length, rlength, rc_attr, lc_attr, posid,
@@ -27,10 +27,6 @@ module Wakame
       of: stat
     )
 
-    def stat : Stat
-      Stat.new(@pointer.value.stat)
-    end
-
     def is_best? : Bool
       @pointer.value.isbest == 1
     end
@@ -39,6 +35,7 @@ module Wakame
       value = @pointer.value
       @surface = String.new(Slice.new(value.surface, value.length))
       @feature = String.new(value.feature)
+      @stat = Stat.new(value.stat)
     end
   end
 end

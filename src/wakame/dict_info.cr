@@ -11,7 +11,7 @@ module Wakame
       UnkDic = LibMeCab::UnkDic
     end
 
-    getter filename, charset
+    getter filename, charset, type
     delegate_getters(
       size, lsize, rsize, version, "next",
       to: Lib::DictionaryInfoT
@@ -21,14 +21,11 @@ module Wakame
       of: type
     )
 
-    def type : Type
-      Type.new(@pointer.value.type)
-    end
-
     def initialize(@pointer : Lib::DictionaryInfoT*)
       value = @pointer.value
       @filename = String.new(value.filename)
       @charset = String.new(value.charset)
+      @type = Type.new(value.type)
     end
   end
 end
