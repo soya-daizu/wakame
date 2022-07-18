@@ -1,6 +1,6 @@
 module Wakame
   module WrappingStruct
-    macro delegate_getters(*names, to base_type)
+    private macro delegate_getters(*names, to base_type)
       {% base_methods = base_type.resolve.methods %}
       {% for name in names %}
         {% return_type = base_methods.find { |m| m.name == name.id }.return_type %}
@@ -10,7 +10,7 @@ module Wakame
       {% end %}
     end
 
-    macro enum_methods(*names, of dest)
+    private macro enum_methods(*names, of dest)
       {% for name in names %}
         def {{name.id}} : Bool
           {{dest.id}}.{{name.id}}
