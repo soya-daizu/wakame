@@ -15,6 +15,11 @@ module Wakame
       self.new(options)
     end
 
+    def self.new(option_str : String)
+      options = Options.new(option_str)
+      self.new(options)
+    end
+
     def initialize(@options : Options)
       @tagger = uninitialized LibMeCab::T*
 
