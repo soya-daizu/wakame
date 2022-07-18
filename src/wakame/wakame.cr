@@ -165,7 +165,8 @@ module Wakame
         next unless LibMeCab.lattice_next(@lattice)
         node_ptr = LibMeCab.lattice_get_bos_node(@lattice)
         while node_ptr
-          node = MeCabNode.new(node_ptr)
+          formatted = LibMeCab.format_node(@tagger, node_ptr)
+          node = MeCabNode.new(node_ptr, formatted)
           yield node
           node_ptr = node.next
         end

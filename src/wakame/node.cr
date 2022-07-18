@@ -14,7 +14,7 @@ module Wakame
       EonNode = LibMeCab::EonNode
     end
 
-    getter surface, feature, stat
+    getter surface, feature, stat, formatted
     delegate_getters(
       prev, "next", enext, bnext, rpath, lpath,
       id, length, rlength, rc_attr, lc_attr, posid,
@@ -31,11 +31,12 @@ module Wakame
       @pointer.value.isbest == 1
     end
 
-    def initialize(@pointer : Lib::MeCabNodeT*)
+    def initialize(@pointer : Lib::MeCabNodeT*, formatted : LibC::Char*)
       value = @pointer.value
       @surface = String.new(Slice.new(value.surface, value.length))
       @feature = String.new(value.feature)
       @stat = Stat.new(value.stat)
+      @formatted = String.new(formatted)
     end
   end
 end
