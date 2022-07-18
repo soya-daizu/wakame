@@ -21,18 +21,17 @@ module Wakame
     end
 
     def initialize(@options : Options)
-      @tagger = uninitialized LibMeCab::T*
+      option_str = @options.build_str
 
-      opt_str = @options.build_str
-
-      @model = LibMeCab.model_new2(opt_str)
-      check(@model, "Could not initialize Model with options: \"#{opt_str}\"")
+      @tagger = uninitialized LibMeCab::T* # the tagger is not initialized as of the first check call
+      @model = LibMeCab.model_new2(option_str)
+      check(@model, "Could not initialize Model with options: \"#{option_str}\"")
 
       @tagger = LibMeCab.model_new_tagger(@model)
-      check(@tagger, "Could not initialize Tagger with options: \"#{opt_str}\"")
+      check(@tagger, "Could not initialize Tagger with options: \"#{option_str}\"")
 
       @lattice = LibMeCab.model_new_lattice(@model)
-      check(@lattice, "Could not initialize Lattice with options: \"#{opt_str}\"")
+      check(@lattice, "Could not initialize Lattice with options: \"#{option_str}\"")
 
       LibMeCab.lattice_set_request_type(@lattice, @options.nbest || 1 > 1 ? LibMeCab::Nbest : LibMeCab::OneBest)
       LibMeCab.lattice_add_request_type(@lattice, LibMeCab::Partial) if @options.partial
