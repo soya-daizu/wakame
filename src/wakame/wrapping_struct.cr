@@ -4,6 +4,9 @@ module Wakame
       {% base_methods = base_type.resolve.methods %}
       {% for name in names %}
         {% return_type = base_methods.find { |m| m.name == name.id }.return_type %}
+        # This method forwards the call to the underlying `{{base_type.resolve}}` structure.
+        #
+        # See `{{base_type.resolve}}#{{name.id}}` for details.
         def {{name.id}} : {{return_type}}
           @pointer.value.{{name.id}}
         end
@@ -12,6 +15,7 @@ module Wakame
 
     private macro enum_methods(*names, of dest)
       {% for name in names %}
+        # Calls `#{{dest.id.capitalize}}#{{name.id}}` of the `#{{dest.id}}`.
         def {{name.id}} : Bool
           {{dest.id}}.{{name.id}}
         end
