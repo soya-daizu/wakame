@@ -5,10 +5,10 @@ module Wakame
   struct DictionaryInfo
     include WrappingStruct
 
-    enum Type
-      SysDic = LibMeCab::SysDic
-      UsrDic = LibMeCab::UsrDic
-      UnkDic = LibMeCab::UnkDic
+    enum DictionaryType
+      SystemDic  = LibMeCab::SysDic
+      UserDic    = LibMeCab::UsrDic
+      UnknownDic = LibMeCab::UnkDic
     end
 
     getter filename, charset, type

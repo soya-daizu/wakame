@@ -7,11 +7,11 @@ module Wakame
     include WrappingStruct
 
     enum Stat
-      NorNode = LibMeCab::NorNode
-      UnkNode = LibMeCab::UnkNode
-      BosNode = LibMeCab::BosNode
-      EosNode = LibMeCab::EosNode
-      EonNode = LibMeCab::EonNode
+      NormalNode  = LibMeCab::NorNode
+      UnknownNode = LibMeCab::UnkNode
+      BosNode     = LibMeCab::BosNode
+      EosNode     = LibMeCab::EosNode
+      EonNode     = LibMeCab::EonNode
     end
 
     getter surface, feature, stat, formatted
