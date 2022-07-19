@@ -6,7 +6,7 @@ module Wakame
   struct MeCabNode
     include WrappingStruct
 
-    enum Stat
+    enum NodeStat
       NormalNode  = LibMeCab::NorNode
       UnknownNode = LibMeCab::UnkNode
       BosNode     = LibMeCab::BosNode
@@ -21,7 +21,7 @@ module Wakame
       char_type, alpha, beta, prob, wcost, cost,
       to: Lib::MeCabNodeT
     )
-    enum_methods Stat, stat
+    enum_methods NodeStat, stat
 
     def is_best? : Bool
       @pointer.value.isbest == 1

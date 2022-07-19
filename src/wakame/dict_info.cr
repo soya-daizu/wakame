@@ -22,7 +22,7 @@ module Wakame
       value = @pointer.value
       @filename = String.new(value.filename)
       @charset = String.new(value.charset)
-      @type = Type.new(value.type)
+      @type = DictionaryType.new(value.type)
     end
   end
 end
