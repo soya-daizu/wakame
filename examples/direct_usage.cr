@@ -1,7 +1,7 @@
 # Example of using C bindings directly
 # Equivalent C code: https://github.com/taku910/mecab/blob/master/mecab/example/example.c
 
-require "../src/wakame/libmecab"
+require "../src/wakame/lib/*"
 
 macro check(eval)
   if !{{eval}}
