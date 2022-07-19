@@ -8,16 +8,16 @@ module Wakame
       # character set of the dictionary. e.g., "SHIFT-JIS", "UTF-8"
       getter charset : LibC::Char*
       # How many words are registered in this dictionary.
-      getter size : LibC::UInt
+      getter size : UInt32
       # dictionary type
       # this value should be MECAB_USR_DIC, MECAB_SYS_DIC, or MECAB_UNK_DIC.
-      getter type : LibC::Int
+      getter type : Int32
       # left attributes size
-      getter lsize : LibC::UInt
+      getter lsize : UInt32
       # right attributes size
-      getter rsize : LibC::UInt
+      getter rsize : UInt32
       # version of this dictionary
-      getter version : LibC::UShort
+      getter version : UInt16
       # pointer to the next dictionary info.
       getter next : Wakame::Lib::DictionaryInfoT*
 
@@ -38,9 +38,9 @@ module Wakame
       # pointer to the next left path
       getter lnext : Wakame::Lib::MeCabPathT*
       # local cost
-      getter cost : LibC::Int
+      getter cost : Int32
       # marginal probability
-      getter prob : LibC::Float
+      getter prob : Float32
 
       # :nodoc:
       def initialize(@rnode, @rnext, @lnode, @lnext, @cost, @prob)
@@ -74,17 +74,17 @@ module Wakame
       # feature string
       getter feature : LibC::Char*
       # unique node id
-      getter id : LibC::UInt
+      getter id : UInt32
       # length of the surface form.
-      getter length : LibC::UShort
+      getter length : UInt16
       # length of the surface form including white space before the morph.
-      getter rlength : LibC::UShort
+      getter rlength : UInt16
       # right attribute id
-      getter rc_attr : LibC::UShort
+      getter rc_attr : UInt16
       # left attribute id
-      getter lc_attr : LibC::UShort
+      getter lc_attr : UInt16
       # unique part of speech id. This value is defined in "pos.def" file.
-      getter posid : LibC::UShort
+      getter posid : UInt16
       # character type
       getter char_type : UInt8
       # status of this model.
@@ -94,15 +94,15 @@ module Wakame
       getter isbest : UInt8
       # forward accumulative log summation.
       # This value is only available when MECAB_MARGINAL_PROB is passed.
-      getter alpha : LibC::Float
+      getter alpha : Float32
       # backward accumulative log summation.
       # This value is only available when MECAB_MARGINAL_PROB is passed.
-      getter beta : LibC::Float
+      getter beta : Float32
       # marginal probability.
       # This value is only available when MECAB_MARGINAL_PROB is passed.
-      getter prob : LibC::Float
+      getter prob : Float32
       # word cost.
-      getter wcost : LibC::Short
+      getter wcost : Int16
       # best accumulative cost from bos node to this node.
       getter cost : LibC::Long
 
