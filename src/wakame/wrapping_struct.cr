@@ -13,11 +13,13 @@ module Wakame
       {% end %}
     end
 
-    private macro enum_methods(*names, of dest)
-      {% for name in names %}
-        # Calls `#{{dest.id.capitalize}}#{{name.id}}` of the `#{{dest.id}}`.
-        def {{name.id}} : Bool
-          {{dest.id}}.{{name.id}}
+    private macro enum_methods(enum_type, target)
+      {% constants = enum_type.resolve.constants %}
+      {% for constant in constants %}
+        {% underscored = constant.stringify.underscore.id %}
+        # Calls `{{enum_type}}#{{underscored}}?` of the `#{{target.id}}`.
+        def {{underscored}}? : Bool
+          {{target.id}}.{{underscored}}?
         end
       {% end %}
     end

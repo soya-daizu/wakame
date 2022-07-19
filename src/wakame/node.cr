@@ -21,11 +21,7 @@ module Wakame
       char_type, alpha, beta, prob, wcost, cost,
       to: Lib::MeCabNodeT
     )
-    enum_methods(
-      nor_node?, unk_node?, bos_node?,
-      eos_node?, eon_node?,
-      of: stat
-    )
+    enum_methods Stat, stat
 
     def is_best? : Bool
       @pointer.value.isbest == 1

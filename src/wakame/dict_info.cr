@@ -16,10 +16,7 @@ module Wakame
       size, lsize, rsize, version, "next",
       to: Lib::DictionaryInfoT
     )
-    enum_methods(
-      usr_dic?, sys_dic?, unk_dic?,
-      of: type
-    )
+    enum_methods DictionaryType, type
 
     def initialize(@pointer : Lib::DictionaryInfoT*)
       value = @pointer.value
