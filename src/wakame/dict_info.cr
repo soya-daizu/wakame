@@ -19,8 +19,12 @@ module Wakame
     getter charset
     # Dictionary type.
     getter type
+    resolve_pointers(
+      "next",
+      of: Lib::DictionaryInfoT, as: DictionaryInfo
+    )
     delegate_getters(
-      size, lsize, rsize, version, "next",
+      size, lsize, rsize, version,
       to: Lib::DictionaryInfoT
     )
     enum_methods DictionaryType, type
