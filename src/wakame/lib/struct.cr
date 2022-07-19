@@ -9,6 +9,7 @@ module Wakame
       # Number of words registered in the dictionary.
       getter size : UInt32
       # Dictionary type
+      #
       # This can be either MECAB_USR_DIC, MECAB_SYS_DIC, or MECAB_UNK_DIC.
       getter type : Int32
       # Left attributes size
@@ -61,12 +62,15 @@ module Wakame
       # Pointer to the node which starts at the same position.
       getter bnext : Wakame::Lib::MeCabNodeT*
       # Pointer to the right path.
+      #
       # This value is NULL in MECAB_ONE_BEST mode.
       getter rpath : Wakame::Lib::MeCabPathT*
       # Pointer to the right path.
+      #
       # This value is NULL in MECAB_ONE_BEST mode.
       getter lpath : Wakame::Lib::MeCabPathT*
       # Surface string
+      #
       # This value is not 0 terminated.
       # You can get the length from the length/rlength members.
       getter surface : LibC::Char*
@@ -83,22 +87,27 @@ module Wakame
       # Left attribute id
       getter lc_attr : UInt16
       # Unique part of speech id.
+      #
       # This value is defined in "pos.def" file.
       getter posid : UInt16
       # Character type
       getter char_type : UInt8
       # Status of this model.
+      #
       # This can be either MECAB_NOR_NODE, MECAB_UNK_NODE, MECAB_BOS_NODE, MECAB_EOS_NODE, or MECAB_EON_NODE.
       getter stat : UInt8
       # Set 1 if this node is the best node.
       getter isbest : UInt8
       # Forward accumulative log summation.
+      #
       # This value is only available when MECAB_MARGINAL_PROB is passed.
       getter alpha : Float32
       # Backward accumulative log summation.
+      #
       # This value is only available when MECAB_MARGINAL_PROB is passed.
       getter beta : Float32
       # Marginal probability
+      #
       # This value is only available when MECAB_MARGINAL_PROB is passed.
       getter prob : Float32
       # Word cost

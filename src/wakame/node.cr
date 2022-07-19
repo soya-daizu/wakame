@@ -2,7 +2,8 @@ require "./lib/*"
 require "./wrapping_struct"
 
 module Wakame
-  # Wrapper for the `Wakame::Lib::MeCabNodeT` structure holding attributes of the parsed node.
+  # Wrapper for the `Wakame::Lib::MeCabNodeT` structure holding attributes
+  # of the parsed node.
   struct MeCabNode
     include WrappingStruct
 
@@ -14,7 +15,18 @@ module Wakame
       EonNode     = LibMeCab::EonNode
     end
 
-    getter surface, feature, stat, formatted
+    # Pointer to the underlying structure.
+    getter pointer
+    # Surface string
+    getter surface
+    # Feature string
+    getter feature
+    # Status of this model.
+    getter stat
+    # Formatted variant of this node.
+    # The format can be specified with the options `output_format_type` or
+    # `node_format` when instantiating the `Wakame::MeCab` class.
+    getter formatted
     delegate_getters(
       prev, "next", enext, bnext, rpath, lpath,
       id, length, rlength, rc_attr, lc_attr, posid,

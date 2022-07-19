@@ -11,7 +11,14 @@ module Wakame
       UnknownDic = LibMeCab::UnkDic
     end
 
-    getter filename, charset, type
+    # Pointer to the underlying structure.
+    getter pointer
+    # Filename of the dictionary.
+    getter filename
+    # Character set of the dictionary.
+    getter charset
+    # Dictionary type.
+    getter type
     delegate_getters(
       size, lsize, rsize, version, "next",
       to: Lib::DictionaryInfoT
