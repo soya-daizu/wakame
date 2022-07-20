@@ -1,4 +1,5 @@
 module Wakame
+  # Internal module which is shared across the wrapper structs.
   module WrappingStruct
     private macro resolve_pointers(*names, of base_type, as dest_type)
       {% for name in names %}

@@ -2,6 +2,8 @@ require "./lib/*"
 require "./wrapping_struct"
 
 module Wakame
+  # Wrapper for the `Wakame::Lib::DictionaryInfoT` structure
+  # holding informations of a dictionary.
   struct DictionaryInfo
     include WrappingStruct
 

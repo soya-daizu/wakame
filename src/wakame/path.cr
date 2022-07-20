@@ -2,6 +2,7 @@ require "./lib/*"
 require "./wrapping_struct"
 
 module Wakame
+  # Wrapper for the `Wakame::Lib::MeCabNodeT` structure.
   struct MeCabPath
     include WrappingStruct
 

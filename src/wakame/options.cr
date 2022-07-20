@@ -33,6 +33,7 @@ module Wakame
       theta, cost_factor
     )
 
+    # Creates a new options object with the given command-line style option arguments.
     def self.new(option_str : String)
       options = self.new
 
@@ -67,6 +68,8 @@ module Wakame
       options
     end
 
+    # Creates a new object that represents a collection of the given option arguments
+    # to pass to the Wakame::MeCab object.
     def initialize(@rcfile = nil, @dicdir = nil, @userdic = nil,
                    @lattice_level = nil, @output_format_type = nil, @all_morphs = nil,
                    @nbest = nil, @partial = nil, @marginal = nil,

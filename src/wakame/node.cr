@@ -2,8 +2,8 @@ require "./lib/*"
 require "./wrapping_struct"
 
 module Wakame
-  # Wrapper for the `Wakame::Lib::MeCabNodeT` structure holding attributes
-  # of the parsed node.
+  # Wrapper for the `Wakame::Lib::MeCabNodeT` structure
+  # holding attributes of the parsed node.
   struct MeCabNode
     include WrappingStruct
 
@@ -42,6 +42,7 @@ module Wakame
     )
     enum_methods NodeStatus, stat
 
+    # Returns true if this node is the best node.
     def is_best? : Bool
       @pointer.value.isbest == 1
     end
