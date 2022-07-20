@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 1.4.1">
+<meta name="crystal_docs.project_version" content="master-dev">
+<meta name="crystal_docs.project_name" content="wakame">
+
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../js/doc.js"></script>
+
+  <meta name="repository-name" content="wakame">
+  <title>Wakame::Lib::MeCabNodeT - wakame master-dev</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../../index.html">
+          wakame
+        </a>
+      </h1>
+
+      <span class="project-version">
+        master-dev
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="wakame/Wakame" data-name="wakame">
+      <a href="../../Wakame.html">Wakame</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="wakame/Wakame/DictionaryInfo" data-name="wakame::dictionaryinfo">
+      <a href="../../Wakame/DictionaryInfo.html">DictionaryInfo</a>
+      
+        <ul>
+  
+  <li class=" " data-id="wakame/Wakame/DictionaryInfo/DictionaryType" data-name="wakame::dictionaryinfo::dictionarytype">
+      <a href="../../Wakame/DictionaryInfo/DictionaryType.html">DictionaryType</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent open current" data-id="wakame/Wakame/Lib" data-name="wakame::lib">
+      <a href="../../Wakame/Lib.html">Lib</a>
+      
+        <ul>
+  
+  <li class=" " data-id="wakame/Wakame/Lib/DictionaryInfoT" data-name="wakame::lib::dictionaryinfot">
+      <a href="../../Wakame/Lib/DictionaryInfoT.html">DictionaryInfoT</a>
+      
+    </li>
+  
+  <li class=" current" data-id="wakame/Wakame/Lib/MeCabNodeT" data-name="wakame::lib::mecabnodet">
+      <a href="../../Wakame/Lib/MeCabNodeT.html">MeCabNodeT</a>
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/Lib/MeCabPathT" data-name="wakame::lib::mecabpatht">
+      <a href="../../Wakame/Lib/MeCabPathT.html">MeCabPathT</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/MeCab" data-name="wakame::mecab">
+      <a href="../../Wakame/MeCab.html">MeCab</a>
+      
+    </li>
+  
+  <li class="parent " data-id="wakame/Wakame/MeCabNode" data-name="wakame::mecabnode">
+      <a href="../../Wakame/MeCabNode.html">MeCabNode</a>
+      
+        <ul>
+  
+  <li class=" " data-id="wakame/Wakame/MeCabNode/NodeStatus" data-name="wakame::mecabnode::nodestatus">
+      <a href="../../Wakame/MeCabNode/NodeStatus.html">NodeStatus</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/MeCabPath" data-name="wakame::mecabpath">
+      <a href="../../Wakame/MeCabPath.html">MeCabPath</a>
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/Options" data-name="wakame::options">
+      <a href="../../Wakame/Options.html">Options</a>
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/WakameError" data-name="wakame::wakameerror">
+      <a href="../../Wakame/WakameError.html">WakameError</a>
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/WrappingStruct" data-name="wakame::wrappingstruct">
+      <a href="../../Wakame/WrappingStruct.html">WrappingStruct</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">struct</span> Wakame::Lib::MeCabNodeT
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Wakame/Lib/MeCabNodeT.html">Wakame::Lib::MeCabNodeT</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>Underlying structure for <code><a href="../../Wakame/MeCabNode.html">Wakame::MeCabNode</a></code>. Represents <code>struct mecab_node_t</code> in C.</p>
+<p>All of these attributes can be accessed directly from <code><a href="../../Wakame/MeCabNode.html">Wakame::MeCabNode</a></code> without
+retrieving this struct from its pointer. DO NOT use this struct in your actual code!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      wakame/lib/struct.cr
+    
+    <br/>
+  
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#alpha%3AFloat32-instance-method" class="signature"><strong>#alpha</strong> : Float32</a>
+        
+          <div class="summary"><p>Forward accumulative log summation.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#beta%3AFloat32-instance-method" class="signature"><strong>#beta</strong> : Float32</a>
+        
+          <div class="summary"><p>Backward accumulative log summation.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#bnext%3APointer%28Wakame%3A%3ALib%3A%3AMeCabNodeT%29-instance-method" class="signature"><strong>#bnext</strong> : Pointer(Wakame::Lib::MeCabNodeT)</a>
+        
+          <div class="summary"><p>Pointer to the node which starts at the same position.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#char_type%3AUInt8-instance-method" class="signature"><strong>#char_type</strong> : UInt8</a>
+        
+          <div class="summary"><p>Character type</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cost%3ALibC%3A%3ALong-instance-method" class="signature"><strong>#cost</strong> : LibC::Long</a>
+        
+          <div class="summary"><p>Best accumulative cost from bos node to this node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#enext%3APointer%28Wakame%3A%3ALib%3A%3AMeCabNodeT%29-instance-method" class="signature"><strong>#enext</strong> : Pointer(Wakame::Lib::MeCabNodeT)</a>
+        
+          <div class="summary"><p>Pointer to the node which ends at the same position.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#feature%3APointer%28LibC%3A%3AChar%29-instance-method" class="signature"><strong>#feature</strong> : Pointer(LibC::Char)</a>
+        
+          <div class="summary"><p>Feature string</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#id%3AUInt32-instance-method" class="signature"><strong>#id</strong> : UInt32</a>
+        
+          <div class="summary"><p>Unique node id</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#isbest%3AUInt8-instance-method" class="signature"><strong>#isbest</strong> : UInt8</a>
+        
+          <div class="summary"><p>Set 1 if this node is the best node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#lc_attr%3AUInt16-instance-method" class="signature"><strong>#lc_attr</strong> : UInt16</a>
+        
+          <div class="summary"><p>Left attribute id</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#length%3AUInt16-instance-method" class="signature"><strong>#length</strong> : UInt16</a>
+        
+          <div class="summary"><p>Length of the surface form.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#lpath%3APointer%28Wakame%3A%3ALib%3A%3AMeCabPathT%29-instance-method" class="signature"><strong>#lpath</strong> : Pointer(Wakame::Lib::MeCabPathT)</a>
+        
+          <div class="summary"><p>Pointer to the right path.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#next%3APointer%28Wakame%3A%3ALib%3A%3AMeCabNodeT%29-instance-method" class="signature"><strong>#next</strong> : Pointer(Wakame::Lib::MeCabNodeT)</a>
+        
+          <div class="summary"><p>Pointer to the next node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#posid%3AUInt16-instance-method" class="signature"><strong>#posid</strong> : UInt16</a>
+        
+          <div class="summary"><p>Unique part of speech id.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#prev%3APointer%28Wakame%3A%3ALib%3A%3AMeCabNodeT%29-instance-method" class="signature"><strong>#prev</strong> : Pointer(Wakame::Lib::MeCabNodeT)</a>
+        
+          <div class="summary"><p>Pointer to the previous node.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#prob%3AFloat32-instance-method" class="signature"><strong>#prob</strong> : Float32</a>
+        
+          <div class="summary"><p>Marginal probability</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#rc_attr%3AUInt16-instance-method" class="signature"><strong>#rc_attr</strong> : UInt16</a>
+        
+          <div class="summary"><p>Right attribute id</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#rlength%3AUInt16-instance-method" class="signature"><strong>#rlength</strong> : UInt16</a>
+        
+          <div class="summary"><p>Length of the surface form including the white space before the morph.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#rpath%3APointer%28Wakame%3A%3ALib%3A%3AMeCabPathT%29-instance-method" class="signature"><strong>#rpath</strong> : Pointer(Wakame::Lib::MeCabPathT)</a>
+        
+          <div class="summary"><p>Pointer to the right path.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#stat%3AUInt8-instance-method" class="signature"><strong>#stat</strong> : UInt8</a>
+        
+          <div class="summary"><p>Status of this model.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#surface%3APointer%28LibC%3A%3AChar%29-instance-method" class="signature"><strong>#surface</strong> : Pointer(LibC::Char)</a>
+        
+          <div class="summary"><p>Surface string</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#wcost%3AInt16-instance-method" class="signature"><strong>#wcost</strong> : Int16</a>
+        
+          <div class="summary"><p>Word cost</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="alpha:Float32-instance-method">
+      <div class="signature">
+        
+        def <strong>alpha</strong> : Float32
+
+        <a class="method-permalink" href="#alpha%3AFloat32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Forward accumulative log summation.</p>
+<p>This value is only available when MECAB_MARGINAL_PROB is passed.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="beta:Float32-instance-method">
+      <div class="signature">
+        
+        def <strong>beta</strong> : Float32
+
+        <a class="method-permalink" href="#beta%3AFloat32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Backward accumulative log summation.</p>
+<p>This value is only available when MECAB_MARGINAL_PROB is passed.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="bnext:Pointer(Wakame::Lib::MeCabNodeT)-instance-method">
+      <div class="signature">
+        
+        def <strong>bnext</strong> : Pointer(<a href="../../Wakame/Lib/MeCabNodeT.html">Wakame::Lib::MeCabNodeT</a>)
+
+        <a class="method-permalink" href="#bnext%3APointer%28Wakame%3A%3ALib%3A%3AMeCabNodeT%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Pointer to the node which starts at the same position.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="char_type:UInt8-instance-method">
+      <div class="signature">
+        
+        def <strong>char_type</strong> : UInt8
+
+        <a class="method-permalink" href="#char_type%3AUInt8-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Character type</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cost:LibC::Long-instance-method">
+      <div class="signature">
+        
+        def <strong>cost</strong> : LibC::Long
+
+        <a class="method-permalink" href="#cost%3ALibC%3A%3ALong-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Best accumulative cost from bos node to this node.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="enext:Pointer(Wakame::Lib::MeCabNodeT)-instance-method">
+      <div class="signature">
+        
+        def <strong>enext</strong> : Pointer(<a href="../../Wakame/Lib/MeCabNodeT.html">Wakame::Lib::MeCabNodeT</a>)
+
+        <a class="method-permalink" href="#enext%3APointer%28Wakame%3A%3ALib%3A%3AMeCabNodeT%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Pointer to the node which ends at the same position.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="feature:Pointer(LibC::Char)-instance-method">
+      <div class="signature">
+        
+        def <strong>feature</strong> : Pointer(LibC::Char)
+
+        <a class="method-permalink" href="#feature%3APointer%28LibC%3A%3AChar%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Feature string</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="id:UInt32-instance-method">
+      <div class="signature">
+        
+        def <strong>id</strong> : UInt32
+
+        <a class="method-permalink" href="#id%3AUInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Unique node id</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="isbest:UInt8-instance-method">
+      <div class="signature">
+        
+        def <strong>isbest</strong> : UInt8
+
+        <a class="method-permalink" href="#isbest%3AUInt8-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set 1 if this node is the best node.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="lc_attr:UInt16-instance-method">
+      <div class="signature">
+        
+        def <strong>lc_attr</strong> : UInt16
+
+        <a class="method-permalink" href="#lc_attr%3AUInt16-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Left attribute id</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="length:UInt16-instance-method">
+      <div class="signature">
+        
+        def <strong>length</strong> : UInt16
+
+        <a class="method-permalink" href="#length%3AUInt16-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Length of the surface form.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="lpath:Pointer(Wakame::Lib::MeCabPathT)-instance-method">
+      <div class="signature">
+        
+        def <strong>lpath</strong> : Pointer(<a href="../../Wakame/Lib/MeCabPathT.html">Wakame::Lib::MeCabPathT</a>)
+
+        <a class="method-permalink" href="#lpath%3APointer%28Wakame%3A%3ALib%3A%3AMeCabPathT%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Pointer to the right path.</p>
+<p>This value is NULL in MECAB_ONE_BEST mode.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="next:Pointer(Wakame::Lib::MeCabNodeT)-instance-method">
+      <div class="signature">
+        
+        def <strong>next</strong> : Pointer(<a href="../../Wakame/Lib/MeCabNodeT.html">Wakame::Lib::MeCabNodeT</a>)
+
+        <a class="method-permalink" href="#next%3APointer%28Wakame%3A%3ALib%3A%3AMeCabNodeT%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Pointer to the next node.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="posid:UInt16-instance-method">
+      <div class="signature">
+        
+        def <strong>posid</strong> : UInt16
+
+        <a class="method-permalink" href="#posid%3AUInt16-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Unique part of speech id.</p>
+<p>This value is defined in &quot;pos.def&quot; file.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="prev:Pointer(Wakame::Lib::MeCabNodeT)-instance-method">
+      <div class="signature">
+        
+        def <strong>prev</strong> : Pointer(<a href="../../Wakame/Lib/MeCabNodeT.html">Wakame::Lib::MeCabNodeT</a>)
+
+        <a class="method-permalink" href="#prev%3APointer%28Wakame%3A%3ALib%3A%3AMeCabNodeT%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Pointer to the previous node.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="prob:Float32-instance-method">
+      <div class="signature">
+        
+        def <strong>prob</strong> : Float32
+
+        <a class="method-permalink" href="#prob%3AFloat32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Marginal probability</p>
+<p>This value is only available when MECAB_MARGINAL_PROB is passed.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="rc_attr:UInt16-instance-method">
+      <div class="signature">
+        
+        def <strong>rc_attr</strong> : UInt16
+
+        <a class="method-permalink" href="#rc_attr%3AUInt16-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Right attribute id</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="rlength:UInt16-instance-method">
+      <div class="signature">
+        
+        def <strong>rlength</strong> : UInt16
+
+        <a class="method-permalink" href="#rlength%3AUInt16-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Length of the surface form including the white space before the morph.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="rpath:Pointer(Wakame::Lib::MeCabPathT)-instance-method">
+      <div class="signature">
+        
+        def <strong>rpath</strong> : Pointer(<a href="../../Wakame/Lib/MeCabPathT.html">Wakame::Lib::MeCabPathT</a>)
+
+        <a class="method-permalink" href="#rpath%3APointer%28Wakame%3A%3ALib%3A%3AMeCabPathT%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Pointer to the right path.</p>
+<p>This value is NULL in MECAB_ONE_BEST mode.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="stat:UInt8-instance-method">
+      <div class="signature">
+        
+        def <strong>stat</strong> : UInt8
+
+        <a class="method-permalink" href="#stat%3AUInt8-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Status of this model.</p>
+<p>This can be either MECAB_NOR_NODE, MECAB_UNK_NODE, MECAB_BOS_NODE, MECAB_EOS_NODE, or MECAB_EON_NODE.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="surface:Pointer(LibC::Char)-instance-method">
+      <div class="signature">
+        
+        def <strong>surface</strong> : Pointer(LibC::Char)
+
+        <a class="method-permalink" href="#surface%3APointer%28LibC%3A%3AChar%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Surface string</p>
+<p>This value is not 0 terminated.
+You can get the length from the length/rlength members.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="wcost:Int16-instance-method">
+      <div class="signature">
+        
+        def <strong>wcost</strong> : Int16
+
+        <a class="method-permalink" href="#wcost%3AInt16-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Word cost</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

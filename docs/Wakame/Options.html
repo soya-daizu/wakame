@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 1.4.1">
+<meta name="crystal_docs.project_version" content="master-dev">
+<meta name="crystal_docs.project_name" content="wakame">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="wakame">
+  <title>Wakame::Options - wakame master-dev</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          wakame
+        </a>
+      </h1>
+
+      <span class="project-version">
+        master-dev
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="wakame/Wakame" data-name="wakame">
+      <a href="../Wakame.html">Wakame</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="wakame/Wakame/DictionaryInfo" data-name="wakame::dictionaryinfo">
+      <a href="../Wakame/DictionaryInfo.html">DictionaryInfo</a>
+      
+        <ul>
+  
+  <li class=" " data-id="wakame/Wakame/DictionaryInfo/DictionaryType" data-name="wakame::dictionaryinfo::dictionarytype">
+      <a href="../Wakame/DictionaryInfo/DictionaryType.html">DictionaryType</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="wakame/Wakame/Lib" data-name="wakame::lib">
+      <a href="../Wakame/Lib.html">Lib</a>
+      
+        <ul>
+  
+  <li class=" " data-id="wakame/Wakame/Lib/DictionaryInfoT" data-name="wakame::lib::dictionaryinfot">
+      <a href="../Wakame/Lib/DictionaryInfoT.html">DictionaryInfoT</a>
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/Lib/MeCabNodeT" data-name="wakame::lib::mecabnodet">
+      <a href="../Wakame/Lib/MeCabNodeT.html">MeCabNodeT</a>
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/Lib/MeCabPathT" data-name="wakame::lib::mecabpatht">
+      <a href="../Wakame/Lib/MeCabPathT.html">MeCabPathT</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/MeCab" data-name="wakame::mecab">
+      <a href="../Wakame/MeCab.html">MeCab</a>
+      
+    </li>
+  
+  <li class="parent " data-id="wakame/Wakame/MeCabNode" data-name="wakame::mecabnode">
+      <a href="../Wakame/MeCabNode.html">MeCabNode</a>
+      
+        <ul>
+  
+  <li class=" " data-id="wakame/Wakame/MeCabNode/NodeStatus" data-name="wakame::mecabnode::nodestatus">
+      <a href="../Wakame/MeCabNode/NodeStatus.html">NodeStatus</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/MeCabPath" data-name="wakame::mecabpath">
+      <a href="../Wakame/MeCabPath.html">MeCabPath</a>
+      
+    </li>
+  
+  <li class=" current" data-id="wakame/Wakame/Options" data-name="wakame::options">
+      <a href="../Wakame/Options.html">Options</a>
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/WakameError" data-name="wakame::wakameerror">
+      <a href="../Wakame/WakameError.html">WakameError</a>
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/WrappingStruct" data-name="wakame::wrappingstruct">
+      <a href="../Wakame/WrappingStruct.html">WrappingStruct</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">struct</span> Wakame::Options
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Wakame/Options.html">Wakame::Options</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      wakame/options.cr
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28option_str%3AString%29-class-method" class="signature"><strong>.new</strong>(option_str : String)</a>
+        
+          <div class="summary"><p>Creates a new options object with the given command-line style option arguments.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new%28rcfile%3AString%3F%3Dnil%2Cdicdir%3AString%3F%3Dnil%2Cuserdic%3AString%3F%3Dnil%2Clattice_level%3AInt32%3F%3Dnil%2Coutput_format_type%3AString%3F%3Dnil%2Call_morphs%3ABool%3F%3Dnil%2Cnbest%3AInt32%3F%3Dnil%2Cpartial%3ABool%3F%3Dnil%2Cmarginal%3ABool%3F%3Dnil%2Cmax_grouping_size%3AInt32%3F%3Dnil%2Cnode_format%3AString%3F%3Dnil%2Cunk_format%3AString%3F%3Dnil%2Cbos_format%3AString%3F%3Dnil%2Ceos_format%3AString%3F%3Dnil%2Ceon_format%3AString%3F%3Dnil%2Cunk_feature%3AString%3F%3Dnil%2Cinput_buffer_size%3AInt32%3F%3Dnil%2Callocate_sentence%3ABool%3F%3Dnil%2Ctheta%3AFloat32%3F%3Dnil%2Ccost_factor%3AInt32%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(rcfile : String? = <span class="n">nil</span>, dicdir : String? = <span class="n">nil</span>, userdic : String? = <span class="n">nil</span>, lattice_level : Int32? = <span class="n">nil</span>, output_format_type : String? = <span class="n">nil</span>, all_morphs : Bool? = <span class="n">nil</span>, nbest : Int32? = <span class="n">nil</span>, partial : Bool? = <span class="n">nil</span>, marginal : Bool? = <span class="n">nil</span>, max_grouping_size : Int32? = <span class="n">nil</span>, node_format : String? = <span class="n">nil</span>, unk_format : String? = <span class="n">nil</span>, bos_format : String? = <span class="n">nil</span>, eos_format : String? = <span class="n">nil</span>, eon_format : String? = <span class="n">nil</span>, unk_feature : String? = <span class="n">nil</span>, input_buffer_size : Int32? = <span class="n">nil</span>, allocate_sentence : Bool? = <span class="n">nil</span>, theta : Float32? = <span class="n">nil</span>, cost_factor : Int32? = <span class="n">nil</span>)</a>
+        
+          <div class="summary"><p>Creates a new object that represents a collection of the given option arguments to pass to the Wakame::MeCab object.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#all_morphs%3ABool%3F-instance-method" class="signature"><strong>#all_morphs</strong> : Bool?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#allocate_sentence%3ABool%3F-instance-method" class="signature"><strong>#allocate_sentence</strong> : Bool?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#bos_format%3AString%3F-instance-method" class="signature"><strong>#bos_format</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cost_factor%3AInt32%3F-instance-method" class="signature"><strong>#cost_factor</strong> : Int32?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#dicdir%3AString%3F-instance-method" class="signature"><strong>#dicdir</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#eon_format%3AString%3F-instance-method" class="signature"><strong>#eon_format</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#eos_format%3AString%3F-instance-method" class="signature"><strong>#eos_format</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#input_buffer_size%3AInt32%3F-instance-method" class="signature"><strong>#input_buffer_size</strong> : Int32?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#lattice_level%3AInt32%3F-instance-method" class="signature"><strong>#lattice_level</strong> : Int32?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#marginal%3ABool%3F-instance-method" class="signature"><strong>#marginal</strong> : Bool?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#max_grouping_size%3AInt32%3F-instance-method" class="signature"><strong>#max_grouping_size</strong> : Int32?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#nbest%3AInt32%3F-instance-method" class="signature"><strong>#nbest</strong> : Int32?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#node_format%3AString%3F-instance-method" class="signature"><strong>#node_format</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#output_format_type%3AString%3F-instance-method" class="signature"><strong>#output_format_type</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#partial%3ABool%3F-instance-method" class="signature"><strong>#partial</strong> : Bool?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#rcfile%3AString%3F-instance-method" class="signature"><strong>#rcfile</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#theta%3AFloat32%3F-instance-method" class="signature"><strong>#theta</strong> : Float32?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#unk_feature%3AString%3F-instance-method" class="signature"><strong>#unk_feature</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#unk_format%3AString%3F-instance-method" class="signature"><strong>#unk_format</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#userdic%3AString%3F-instance-method" class="signature"><strong>#userdic</strong> : String?</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(option_str:String)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(option_str : String)
+
+        <a class="method-permalink" href="#new%28option_str%3AString%29-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Creates a new options object with the given command-line style option arguments.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new(rcfile:String?=nil,dicdir:String?=nil,userdic:String?=nil,lattice_level:Int32?=nil,output_format_type:String?=nil,all_morphs:Bool?=nil,nbest:Int32?=nil,partial:Bool?=nil,marginal:Bool?=nil,max_grouping_size:Int32?=nil,node_format:String?=nil,unk_format:String?=nil,bos_format:String?=nil,eos_format:String?=nil,eon_format:String?=nil,unk_feature:String?=nil,input_buffer_size:Int32?=nil,allocate_sentence:Bool?=nil,theta:Float32?=nil,cost_factor:Int32?=nil)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(rcfile : String? = <span class="n">nil</span>, dicdir : String? = <span class="n">nil</span>, userdic : String? = <span class="n">nil</span>, lattice_level : Int32? = <span class="n">nil</span>, output_format_type : String? = <span class="n">nil</span>, all_morphs : Bool? = <span class="n">nil</span>, nbest : Int32? = <span class="n">nil</span>, partial : Bool? = <span class="n">nil</span>, marginal : Bool? = <span class="n">nil</span>, max_grouping_size : Int32? = <span class="n">nil</span>, node_format : String? = <span class="n">nil</span>, unk_format : String? = <span class="n">nil</span>, bos_format : String? = <span class="n">nil</span>, eos_format : String? = <span class="n">nil</span>, eon_format : String? = <span class="n">nil</span>, unk_feature : String? = <span class="n">nil</span>, input_buffer_size : Int32? = <span class="n">nil</span>, allocate_sentence : Bool? = <span class="n">nil</span>, theta : Float32? = <span class="n">nil</span>, cost_factor : Int32? = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#new%28rcfile%3AString%3F%3Dnil%2Cdicdir%3AString%3F%3Dnil%2Cuserdic%3AString%3F%3Dnil%2Clattice_level%3AInt32%3F%3Dnil%2Coutput_format_type%3AString%3F%3Dnil%2Call_morphs%3ABool%3F%3Dnil%2Cnbest%3AInt32%3F%3Dnil%2Cpartial%3ABool%3F%3Dnil%2Cmarginal%3ABool%3F%3Dnil%2Cmax_grouping_size%3AInt32%3F%3Dnil%2Cnode_format%3AString%3F%3Dnil%2Cunk_format%3AString%3F%3Dnil%2Cbos_format%3AString%3F%3Dnil%2Ceos_format%3AString%3F%3Dnil%2Ceon_format%3AString%3F%3Dnil%2Cunk_feature%3AString%3F%3Dnil%2Cinput_buffer_size%3AInt32%3F%3Dnil%2Callocate_sentence%3ABool%3F%3Dnil%2Ctheta%3AFloat32%3F%3Dnil%2Ccost_factor%3AInt32%3F%3Dnil%29-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Creates a new object that represents a collection of the given option arguments
+to pass to the Wakame::MeCab object.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="all_morphs:Bool?-instance-method">
+      <div class="signature">
+        
+        def <strong>all_morphs</strong> : Bool?
+
+        <a class="method-permalink" href="#all_morphs%3ABool%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="allocate_sentence:Bool?-instance-method">
+      <div class="signature">
+        
+        def <strong>allocate_sentence</strong> : Bool?
+
+        <a class="method-permalink" href="#allocate_sentence%3ABool%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="bos_format:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>bos_format</strong> : String?
+
+        <a class="method-permalink" href="#bos_format%3AString%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cost_factor:Int32?-instance-method">
+      <div class="signature">
+        
+        def <strong>cost_factor</strong> : Int32?
+
+        <a class="method-permalink" href="#cost_factor%3AInt32%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="dicdir:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>dicdir</strong> : String?
+
+        <a class="method-permalink" href="#dicdir%3AString%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="eon_format:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>eon_format</strong> : String?
+
+        <a class="method-permalink" href="#eon_format%3AString%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="eos_format:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>eos_format</strong> : String?
+
+        <a class="method-permalink" href="#eos_format%3AString%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="input_buffer_size:Int32?-instance-method">
+      <div class="signature">
+        
+        def <strong>input_buffer_size</strong> : Int32?
+
+        <a class="method-permalink" href="#input_buffer_size%3AInt32%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="lattice_level:Int32?-instance-method">
+      <div class="signature">
+        
+        def <strong>lattice_level</strong> : Int32?
+
+        <a class="method-permalink" href="#lattice_level%3AInt32%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="marginal:Bool?-instance-method">
+      <div class="signature">
+        
+        def <strong>marginal</strong> : Bool?
+
+        <a class="method-permalink" href="#marginal%3ABool%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="max_grouping_size:Int32?-instance-method">
+      <div class="signature">
+        
+        def <strong>max_grouping_size</strong> : Int32?
+
+        <a class="method-permalink" href="#max_grouping_size%3AInt32%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="nbest:Int32?-instance-method">
+      <div class="signature">
+        
+        def <strong>nbest</strong> : Int32?
+
+        <a class="method-permalink" href="#nbest%3AInt32%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="node_format:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>node_format</strong> : String?
+
+        <a class="method-permalink" href="#node_format%3AString%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="output_format_type:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>output_format_type</strong> : String?
+
+        <a class="method-permalink" href="#output_format_type%3AString%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="partial:Bool?-instance-method">
+      <div class="signature">
+        
+        def <strong>partial</strong> : Bool?
+
+        <a class="method-permalink" href="#partial%3ABool%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="rcfile:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>rcfile</strong> : String?
+
+        <a class="method-permalink" href="#rcfile%3AString%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="theta:Float32?-instance-method">
+      <div class="signature">
+        
+        def <strong>theta</strong> : Float32?
+
+        <a class="method-permalink" href="#theta%3AFloat32%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="unk_feature:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>unk_feature</strong> : String?
+
+        <a class="method-permalink" href="#unk_feature%3AString%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="unk_format:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>unk_format</strong> : String?
+
+        <a class="method-permalink" href="#unk_format%3AString%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="userdic:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>userdic</strong> : String?
+
+        <a class="method-permalink" href="#userdic%3AString%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

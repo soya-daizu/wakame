@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 1.4.1">
+<meta name="crystal_docs.project_version" content="master-dev">
+<meta name="crystal_docs.project_name" content="wakame">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="wakame">
+  <title>Wakame::MeCab - wakame master-dev</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          wakame
+        </a>
+      </h1>
+
+      <span class="project-version">
+        master-dev
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="wakame/Wakame" data-name="wakame">
+      <a href="../Wakame.html">Wakame</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="wakame/Wakame/DictionaryInfo" data-name="wakame::dictionaryinfo">
+      <a href="../Wakame/DictionaryInfo.html">DictionaryInfo</a>
+      
+        <ul>
+  
+  <li class=" " data-id="wakame/Wakame/DictionaryInfo/DictionaryType" data-name="wakame::dictionaryinfo::dictionarytype">
+      <a href="../Wakame/DictionaryInfo/DictionaryType.html">DictionaryType</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="wakame/Wakame/Lib" data-name="wakame::lib">
+      <a href="../Wakame/Lib.html">Lib</a>
+      
+        <ul>
+  
+  <li class=" " data-id="wakame/Wakame/Lib/DictionaryInfoT" data-name="wakame::lib::dictionaryinfot">
+      <a href="../Wakame/Lib/DictionaryInfoT.html">DictionaryInfoT</a>
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/Lib/MeCabNodeT" data-name="wakame::lib::mecabnodet">
+      <a href="../Wakame/Lib/MeCabNodeT.html">MeCabNodeT</a>
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/Lib/MeCabPathT" data-name="wakame::lib::mecabpatht">
+      <a href="../Wakame/Lib/MeCabPathT.html">MeCabPathT</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" current" data-id="wakame/Wakame/MeCab" data-name="wakame::mecab">
+      <a href="../Wakame/MeCab.html">MeCab</a>
+      
+    </li>
+  
+  <li class="parent " data-id="wakame/Wakame/MeCabNode" data-name="wakame::mecabnode">
+      <a href="../Wakame/MeCabNode.html">MeCabNode</a>
+      
+        <ul>
+  
+  <li class=" " data-id="wakame/Wakame/MeCabNode/NodeStatus" data-name="wakame::mecabnode::nodestatus">
+      <a href="../Wakame/MeCabNode/NodeStatus.html">NodeStatus</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/MeCabPath" data-name="wakame::mecabpath">
+      <a href="../Wakame/MeCabPath.html">MeCabPath</a>
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/Options" data-name="wakame::options">
+      <a href="../Wakame/Options.html">Options</a>
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/WakameError" data-name="wakame::wakameerror">
+      <a href="../Wakame/WakameError.html">WakameError</a>
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/WrappingStruct" data-name="wakame::wrappingstruct">
+      <a href="../Wakame/WrappingStruct.html">WrappingStruct</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Wakame::MeCab
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Wakame/MeCab.html">Wakame::MeCab</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p><code><a href="../Wakame/MeCab.html">MeCab</a></code> is the primary class to interact with the MeCab library.</p>
+<p>It can be initialized by passing either a complete <code><a href="../Wakame/Options.html">Wakame::Options</a></code> object,
+or a series of arguments to be passed to the underlying <code><a href="../Wakame/Options.html">Wakame::Options</a></code> object,
+or a string of option arguments in command line format.</p>
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;wakame&quot;</span>
+
+mecab <span class="o">=</span> <span class="t">Wakame</span><span class="t">::</span><span class="t">MeCab</span>.<span class="k">new</span>
+puts mecab.parse(<span class="s">&quot;吾輩は猫である。名前はまだ無い。&quot;</span>)
+<span class="c"># =&gt; 吾輩    名詞,代名詞,一般,*,*,*,吾輩,ワガハイ,ワガハイ</span>
+<span class="c">#    は      助詞,係助詞,*,*,*,*,は,ハ,ワ</span>
+<span class="c">#    猫      名詞,一般,*,*,*,*,猫,ネコ,ネコ</span>
+<span class="c">#    で      助動詞,*,*,*,特殊・ダ,連用形,だ,デ,デ</span>
+<span class="c">#    ある    助動詞,*,*,*,五段・ラ行アル,基本形,ある,アル,アル</span>
+<span class="c">#    。      記号,句点,*,*,*,*,。,。,。</span>
+<span class="c">#    名前    名詞,一般,*,*,*,*,名前,ナマエ,ナマエ</span>
+<span class="c">#    は      助詞,係助詞,*,*,*,*,は,ハ,ワ</span>
+<span class="c">#    まだ    副詞,助詞類接続,*,*,*,*,まだ,マダ,マダ</span>
+<span class="c">#    無い    形容詞,自立,*,*,形容詞・アウオ段,基本形,無い,ナイ,ナイ</span>
+<span class="c">#    。      記号,句点,*,*,*,*,。,。,。</span>
+<span class="c">#    EOS</span>
+
+mecab.parse(<span class="s">&quot;吾輩は猫である。名前はまだ無い。&quot;</span>) <span class="k">do</span> <span class="o">|</span>node<span class="o">|</span>
+  puts <span class="s">&quot;</span><span class="i">#{</span>node.surface<span class="i">}</span><span class="s">,</span><span class="i">#{</span>node.feature<span class="i">}</span><span class="s">&quot;</span> <span class="k">if</span> <span class="o">!</span>node.bos_node? &amp;&amp; <span class="o">!</span>node.eos_node?
+<span class="k">end</span>
+<span class="c"># =&gt; 吾輩,名詞,代名詞,一般,*,*,*,吾輩,ワガハイ,ワガハイ</span>
+<span class="c">#    は,助詞,係助詞,*,*,*,*,は,ハ,ワ</span>
+<span class="c">#    猫,名詞,一般,*,*,*,*,猫,ネコ,ネコ</span>
+<span class="c">#    で,助動詞,*,*,*,特殊・ダ,連用形,だ,デ,デ</span>
+<span class="c">#    ある,助動詞,*,*,*,五段・ラ行アル,基本形,ある,アル,アル</span>
+<span class="c">#    。,記号,句点,*,*,*,*,。,。,。</span>
+<span class="c">#    名前,名詞,一般,*,*,*,*,名前,ナマエ,ナマエ</span>
+<span class="c">#    は,助詞,係助詞,*,*,*,*,は,ハ,ワ</span>
+<span class="c">#    まだ,副詞,助詞類接続,*,*,*,*,まだ,マダ,マダ</span>
+<span class="c">#    無い,形容詞,自立,*,*,形容詞・アウオ段,基本形,無い,ナイ,ナイ</span>
+<span class="c">#    。,記号,句点,*,*,*,*,。,。,。</span>
+
+<span class="c"># These two are equivalent</span>
+mecab <span class="o">=</span> <span class="t">Wakame</span><span class="t">::</span><span class="t">MeCab</span>.<span class="k">new</span>(node_format: <span class="s">&quot;%pS%f[7]\\s&quot;</span>, eos_format: <span class="s">&quot;\\0&quot;</span>)
+puts mecab.parse(<span class="s">&quot;吾輩は猫である。名前はまだ無い。&quot;</span>)
+<span class="c"># =&gt; ワガハイ ハ ネコ デ アル 。 ナマエ ハ マダ ナイ 。</span>
+
+mecab <span class="o">=</span> <span class="t">Wakame</span><span class="t">::</span><span class="t">MeCab</span>.<span class="k">new</span>(<span class="s">&quot;-F %pS%f[7]\\s -E \\0&quot;</span>)
+puts mecab.parse(<span class="s">&quot;吾輩は猫である。名前はまだ無い。&quot;</span>)
+<span class="c"># =&gt; ワガハイ ハ ネコ デ アル 。 ナマエ ハ マダ ナイ 。</span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      wakame/wakame.cr
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28option_str%3AString%29-class-method" class="signature"><strong>.new</strong>(option_str : String)</a>
+        
+          <div class="summary"><p>Creates a new MeCab instance from the given string of option arguments in the style of MeCab's command line interface.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new%28options%3AOptions%29-class-method" class="signature"><strong>.new</strong>(options : Options)</a>
+        
+          <div class="summary"><p>Creates a new MeCab instance with the given <code><a href="../Wakame/Options.html">Wakame::Options</a></code> object.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new%28%2A%2Aoption_args%29-class-method" class="signature"><strong>.new</strong>(**option_args)</a>
+        
+          <div class="summary"><p>Creates a new MeCab instance from the given option arguments.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#dicts%3AArray%28Wakame%3A%3ADictionaryInfo%29-instance-method" class="signature"><strong>#dicts</strong> : Array(Wakame::DictionaryInfo)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#lattice%3APointer%28LibMeCab%3A%3ALatticeT%29-instance-method" class="signature"><strong>#lattice</strong> : Pointer(LibMeCab::LatticeT)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#libpath-instance-method" class="signature"><strong>#libpath</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#model%3APointer%28LibMeCab%3A%3AModelT%29-instance-method" class="signature"><strong>#model</strong> : Pointer(LibMeCab::ModelT)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#options%3AWakame%3A%3AOptions-instance-method" class="signature"><strong>#options</strong> : Wakame::Options</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#parse%28text%3AString%2Cboundary_constraints%3ARegex%7CString%29-instance-method" class="signature"><strong>#parse</strong>(text : String, boundary_constraints : Regex | String)</a>
+        
+          <div class="summary"><p>Parses the given text with boundary constraints, returning the MeCab output as a single String.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#parse%28text%3AString%2Cfeature_constraints%3AHash%28String%2CString%29%29-instance-method" class="signature"><strong>#parse</strong>(text : String, feature_constraints : Hash(String, String))</a>
+        
+          <div class="summary"><p>Parses the given text with feature constraints, returning the MeCab output as a single String.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#parse%28text%3AString%29-instance-method" class="signature"><strong>#parse</strong>(text : String)</a>
+        
+          <div class="summary"><p>Parses the given text, returning the MeCab output as a single String.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#parse%28text%3AString%2Cboundary_constraints%3ARegex%7CString%2C%26block%3AMeCabNode-%3E%29-instance-method" class="signature"><strong>#parse</strong>(text : String, boundary_constraints : Regex | String, &block : MeCabNode -> )</a>
+        
+          <div class="summary"><p>Parses the given text with boundary constraints, yielding each node to the given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#parse%28text%3AString%2Cfeature_constraints%3AHash%28String%2CString%29%2C%26block%3AMeCabNode-%3E%29-instance-method" class="signature"><strong>#parse</strong>(text : String, feature_constraints : Hash(String, String), &block : MeCabNode -> )</a>
+        
+          <div class="summary"><p>Parses the given text with feature constraints, yielding each node to the given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#parse%28text%3AString%2C%26block%3AMeCabNode-%3E%29-instance-method" class="signature"><strong>#parse</strong>(text : String, &block : MeCabNode -> )</a>
+        
+          <div class="summary"><p>Parses the given text, yielding each node to the given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tagger%3APointer%28LibMeCab%3A%3AT%29-instance-method" class="signature"><strong>#tagger</strong> : Pointer(LibMeCab::T)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#version%3APointer%28UInt8%29-instance-method" class="signature"><strong>#version</strong> : Pointer(UInt8)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(option_str:String)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(option_str : String)
+
+        <a class="method-permalink" href="#new%28option_str%3AString%29-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Creates a new MeCab instance from the given string of option arguments
+in the style of MeCab's command line interface.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new(options:Options)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(options : <a href="../Wakame/Options.html">Options</a>)
+
+        <a class="method-permalink" href="#new%28options%3AOptions%29-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Creates a new MeCab instance with the given <code><a href="../Wakame/Options.html">Wakame::Options</a></code> object.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new(**option_args)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(**option_args)
+
+        <a class="method-permalink" href="#new%28%2A%2Aoption_args%29-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Creates a new MeCab instance from the given option arguments.
+These arguments are first forwarded to instantiate the underlying
+<code><a href="../Wakame/Options.html">Wakame::Options</a></code> object that is needed to instantiate itself.</p>
+<p>See <code><a href="../Wakame/Options.html">Wakame::Options</a></code> for the all available options.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="dicts:Array(Wakame::DictionaryInfo)-instance-method">
+      <div class="signature">
+        
+        def <strong>dicts</strong> : Array(<a href="../Wakame/DictionaryInfo.html">Wakame::DictionaryInfo</a>)
+
+        <a class="method-permalink" href="#dicts%3AArray%28Wakame%3A%3ADictionaryInfo%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="lattice:Pointer(LibMeCab::LatticeT)-instance-method">
+      <div class="signature">
+        
+        def <strong>lattice</strong> : Pointer(LibMeCab::LatticeT)
+
+        <a class="method-permalink" href="#lattice%3APointer%28LibMeCab%3A%3ALatticeT%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="libpath-instance-method">
+      <div class="signature">
+        
+        def <strong>libpath</strong>
+
+        <a class="method-permalink" href="#libpath-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="model:Pointer(LibMeCab::ModelT)-instance-method">
+      <div class="signature">
+        
+        def <strong>model</strong> : Pointer(LibMeCab::ModelT)
+
+        <a class="method-permalink" href="#model%3APointer%28LibMeCab%3A%3AModelT%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="options:Wakame::Options-instance-method">
+      <div class="signature">
+        
+        def <strong>options</strong> : <a href="../Wakame/Options.html">Wakame::Options</a>
+
+        <a class="method-permalink" href="#options%3AWakame%3A%3AOptions-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="parse(text:String,boundary_constraints:Regex|String)-instance-method">
+      <div class="signature">
+        
+        def <strong>parse</strong>(text : String, boundary_constraints : Regex | String)
+
+        <a class="method-permalink" href="#parse%28text%3AString%2Cboundary_constraints%3ARegex%7CString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Parses the given text with boundary constraints,
+returning the MeCab output as a single String.</p>
+<p>Boundary constraints provide hints to MeCab on where
+the morpheme boundaries are located in the given text.</p>
+<pre><code class="language-crystal">mecab <span class="o">=</span> <span class="t">Wakame</span><span class="t">::</span><span class="t">MeCab</span>.<span class="k">new</span>
+<span class="c"># Without using boundary constraints</span>
+puts mecab.parse(<span class="s">&quot;外国人参政権&quot;</span>)
+<span class="c"># =&gt; 外国    名詞,一般,*,*,*,*,外国,ガイコク,ガイコク</span>
+<span class="c">#    人参    名詞,一般,*,*,*,*,人参,ニンジン,ニンジン</span>
+<span class="c">#    政権    名詞,一般,*,*,*,*,政権,セイケン,セイケン</span>
+<span class="c">#    EOS</span>
+
+<span class="c"># Giving MeCab hints with boundary constraints</span>
+puts mecab.parse(<span class="s">&quot;外国人参政権&quot;</span>, <span class="s">/外国|人/</span>)
+<span class="c"># =&gt; 外国    名詞,一般,*,*,*,*,外国,ガイコク,ガイコク</span>
+<span class="c">#    人      名詞,接尾,一般,*,*,*,人,ジン,ジン</span>
+<span class="c">#    参政    名詞,サ変接続,*,*,*,*,参政,サンセイ,サンセイ</span>
+<span class="c">#    権      名詞,接尾,一般,*,*,*,権,ケン,ケン</span>
+<span class="t">EOS</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="parse(text:String,feature_constraints:Hash(String,String))-instance-method">
+      <div class="signature">
+        
+        def <strong>parse</strong>(text : String, feature_constraints : Hash(String, String))
+
+        <a class="method-permalink" href="#parse%28text%3AString%2Cfeature_constraints%3AHash%28String%2CString%29%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Parses the given text with feature constraints,
+returning the MeCab output as a single String.</p>
+<p>Feature constraints provide instructions to MeCab to use
+a specific feature for any morphemes that match the given key.
+Set the morpheme String as a key and the feature String as the value.
+Wildcard &quot;*&quot; can be used as the feature to let MeCab decide which feature to use.</p>
+<pre><code class="language-crystal">mecab <span class="o">=</span> <span class="t">Wakame</span><span class="t">::</span><span class="t">MeCab</span>.<span class="k">new</span>
+<span class="c"># Without using feature constraints</span>
+puts mecab.parse(<span class="s">&quot;邪神ちゃんドロップキーック！&quot;</span>)
+<span class="c"># =&gt; 邪神    名詞,一般,*,*,*,*,邪神,ジャシン,ジャシン</span>
+<span class="c">#    ちゃん  名詞,接尾,人名,*,*,*,ちゃん,チャン,チャン</span>
+<span class="c">#    ドロップキーック        名詞,一般,*,*,*,*,*</span>
+<span class="c">#    ！      記号,一般,*,*,*,*,！,！,！</span>
+<span class="t">EOS</span>
+<span class="c"># Giving MeCab hints with feature constraints</span>
+puts mecab.parse(<span class="s">&quot;邪神ちゃんドロップキーック！&quot;</span>, {<span class="s">&quot;邪神ちゃん&quot;</span> =&gt; <span class="s">&quot;*&quot;</span>, <span class="s">&quot;キーック&quot;</span> =&gt; <span class="s">&quot;*&quot;</span>})
+<span class="c"># =&gt; 邪神ちゃん      名詞,一般,*,*,*,*,*</span>
+<span class="c">#    ドロップ        名詞,一般,*,*,*,*,ドロップ,ドロップ,ドロップ</span>
+<span class="c">#    キーック        名詞,一般,*,*,*,*,*</span>
+<span class="c">#    ！      記号,一般,*,*,*,*,！,！,！</span>
+<span class="t">EOS</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="parse(text:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>parse</strong>(text : String)
+
+        <a class="method-permalink" href="#parse%28text%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Parses the given text, returning the MeCab output as a single String.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="parse(text:String,boundary_constraints:Regex|String,&amp;block:MeCabNode-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>parse</strong>(text : String, boundary_constraints : Regex | String, &block : <a href="../Wakame/MeCabNode.html">MeCabNode</a> -> )
+
+        <a class="method-permalink" href="#parse%28text%3AString%2Cboundary_constraints%3ARegex%7CString%2C%26block%3AMeCabNode-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Parses the given text with boundary constraints,
+yielding each node to the given block.</p>
+<p>See <code><a href="../Wakame/MeCab.html#parse%28text%3AString%2Cboundary_constraints%3ARegex%7CString%29-instance-method">#parse(text : String, boundary_constraints : Regex | String)</a></code> for details.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="parse(text:String,feature_constraints:Hash(String,String),&amp;block:MeCabNode-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>parse</strong>(text : String, feature_constraints : Hash(String, String), &block : <a href="../Wakame/MeCabNode.html">MeCabNode</a> -> )
+
+        <a class="method-permalink" href="#parse%28text%3AString%2Cfeature_constraints%3AHash%28String%2CString%29%2C%26block%3AMeCabNode-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Parses the given text with feature constraints,
+yielding each node to the given block.</p>
+<p>See <code>#parse(text : String, feature_constraints : Hash(String, String))</code> for details.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="parse(text:String,&amp;block:MeCabNode-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>parse</strong>(text : String, &block : <a href="../Wakame/MeCabNode.html">MeCabNode</a> -> )
+
+        <a class="method-permalink" href="#parse%28text%3AString%2C%26block%3AMeCabNode-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Parses the given text, yielding each node to the given block.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tagger:Pointer(LibMeCab::T)-instance-method">
+      <div class="signature">
+        
+        def <strong>tagger</strong> : Pointer(LibMeCab::T)
+
+        <a class="method-permalink" href="#tagger%3APointer%28LibMeCab%3A%3AT%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="version:Pointer(UInt8)-instance-method">
+      <div class="signature">
+        
+        def <strong>version</strong> : Pointer(UInt8)
+
+        <a class="method-permalink" href="#version%3APointer%28UInt8%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

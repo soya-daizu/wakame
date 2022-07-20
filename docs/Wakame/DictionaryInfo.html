@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 1.4.1">
+<meta name="crystal_docs.project_version" content="master-dev">
+<meta name="crystal_docs.project_name" content="wakame">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="wakame">
+  <title>Wakame::DictionaryInfo - wakame master-dev</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          wakame
+        </a>
+      </h1>
+
+      <span class="project-version">
+        master-dev
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="wakame/Wakame" data-name="wakame">
+      <a href="../Wakame.html">Wakame</a>
+      
+        <ul>
+  
+  <li class="parent open current" data-id="wakame/Wakame/DictionaryInfo" data-name="wakame::dictionaryinfo">
+      <a href="../Wakame/DictionaryInfo.html">DictionaryInfo</a>
+      
+        <ul>
+  
+  <li class=" " data-id="wakame/Wakame/DictionaryInfo/DictionaryType" data-name="wakame::dictionaryinfo::dictionarytype">
+      <a href="../Wakame/DictionaryInfo/DictionaryType.html">DictionaryType</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="wakame/Wakame/Lib" data-name="wakame::lib">
+      <a href="../Wakame/Lib.html">Lib</a>
+      
+        <ul>
+  
+  <li class=" " data-id="wakame/Wakame/Lib/DictionaryInfoT" data-name="wakame::lib::dictionaryinfot">
+      <a href="../Wakame/Lib/DictionaryInfoT.html">DictionaryInfoT</a>
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/Lib/MeCabNodeT" data-name="wakame::lib::mecabnodet">
+      <a href="../Wakame/Lib/MeCabNodeT.html">MeCabNodeT</a>
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/Lib/MeCabPathT" data-name="wakame::lib::mecabpatht">
+      <a href="../Wakame/Lib/MeCabPathT.html">MeCabPathT</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/MeCab" data-name="wakame::mecab">
+      <a href="../Wakame/MeCab.html">MeCab</a>
+      
+    </li>
+  
+  <li class="parent " data-id="wakame/Wakame/MeCabNode" data-name="wakame::mecabnode">
+      <a href="../Wakame/MeCabNode.html">MeCabNode</a>
+      
+        <ul>
+  
+  <li class=" " data-id="wakame/Wakame/MeCabNode/NodeStatus" data-name="wakame::mecabnode::nodestatus">
+      <a href="../Wakame/MeCabNode/NodeStatus.html">NodeStatus</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/MeCabPath" data-name="wakame::mecabpath">
+      <a href="../Wakame/MeCabPath.html">MeCabPath</a>
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/Options" data-name="wakame::options">
+      <a href="../Wakame/Options.html">Options</a>
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/WakameError" data-name="wakame::wakameerror">
+      <a href="../Wakame/WakameError.html">WakameError</a>
+      
+    </li>
+  
+  <li class=" " data-id="wakame/Wakame/WrappingStruct" data-name="wakame::wrappingstruct">
+      <a href="../Wakame/WrappingStruct.html">WrappingStruct</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">struct</span> Wakame::DictionaryInfo
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Wakame/DictionaryInfo.html">Wakame::DictionaryInfo</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>Wrapper for the <code><a href="../Wakame/Lib/DictionaryInfoT.html">Wakame::Lib::DictionaryInfoT</a></code> structure
+holding informations of a dictionary.</p>
+
+
+
+
+
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type"><a href="../Wakame/WrappingStruct.html">Wakame::WrappingStruct</a></li>
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      wakame/dict_info.cr
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28pointer%3APointer%28Lib%3A%3ADictionaryInfoT%29%29-class-method" class="signature"><strong>.new</strong>(pointer : Pointer(Lib::DictionaryInfoT))</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#charset%3AString-instance-method" class="signature"><strong>#charset</strong> : String</a>
+        
+          <div class="summary"><p>Character set of the dictionary.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#filename%3AString-instance-method" class="signature"><strong>#filename</strong> : String</a>
+        
+          <div class="summary"><p>Filename of the dictionary.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#lsize%3AUInt32-instance-method" class="signature"><strong>#lsize</strong> : UInt32</a>
+        
+          <div class="summary"><p>This method forwards the call to the underlying <code><a href="../Wakame/Lib/DictionaryInfoT.html">Wakame::Lib::DictionaryInfoT</a></code> structure.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#next%3ADictionaryInfo%3F-instance-method" class="signature"><strong>#next</strong> : DictionaryInfo?</a>
+        
+          <div class="summary"><p>This method forwards the call to the underlying <code><a href="../Wakame/Lib/DictionaryInfoT.html">Wakame::Lib::DictionaryInfoT</a></code> structure, resolves the pointer returned, and returns the wrapped variant of it.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pointer%3APointer%28Wakame%3A%3ALib%3A%3ADictionaryInfoT%29-instance-method" class="signature"><strong>#pointer</strong> : Pointer(Wakame::Lib::DictionaryInfoT)</a>
+        
+          <div class="summary"><p>Pointer to the underlying structure.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#rsize%3AUInt32-instance-method" class="signature"><strong>#rsize</strong> : UInt32</a>
+        
+          <div class="summary"><p>This method forwards the call to the underlying <code><a href="../Wakame/Lib/DictionaryInfoT.html">Wakame::Lib::DictionaryInfoT</a></code> structure.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#size%3AUInt32-instance-method" class="signature"><strong>#size</strong> : UInt32</a>
+        
+          <div class="summary"><p>This method forwards the call to the underlying <code><a href="../Wakame/Lib/DictionaryInfoT.html">Wakame::Lib::DictionaryInfoT</a></code> structure.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#system_dic%3F%3ABool-instance-method" class="signature"><strong>#system_dic?</strong> : Bool</a>
+        
+          <div class="summary"><p>Calls <code><a href="../Wakame/DictionaryInfo/DictionaryType.html#system_dic%3F-instance-method">DictionaryType#system_dic?</a></code> of the <code><a href="../Wakame/DictionaryInfo.html#type%3AWakame%3A%3ADictionaryInfo%3A%3ADictionaryType-instance-method">#type</a></code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#type%3AWakame%3A%3ADictionaryInfo%3A%3ADictionaryType-instance-method" class="signature"><strong>#type</strong> : Wakame::DictionaryInfo::DictionaryType</a>
+        
+          <div class="summary"><p>Dictionary type.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#unknown_dic%3F%3ABool-instance-method" class="signature"><strong>#unknown_dic?</strong> : Bool</a>
+        
+          <div class="summary"><p>Calls <code><a href="../Wakame/DictionaryInfo/DictionaryType.html#unknown_dic%3F-instance-method">DictionaryType#unknown_dic?</a></code> of the <code><a href="../Wakame/DictionaryInfo.html#type%3AWakame%3A%3ADictionaryInfo%3A%3ADictionaryType-instance-method">#type</a></code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#user_dic%3F%3ABool-instance-method" class="signature"><strong>#user_dic?</strong> : Bool</a>
+        
+          <div class="summary"><p>Calls <code><a href="../Wakame/DictionaryInfo/DictionaryType.html#user_dic%3F-instance-method">DictionaryType#user_dic?</a></code> of the <code><a href="../Wakame/DictionaryInfo.html#type%3AWakame%3A%3ADictionaryInfo%3A%3ADictionaryType-instance-method">#type</a></code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#version%3AUInt16-instance-method" class="signature"><strong>#version</strong> : UInt16</a>
+        
+          <div class="summary"><p>This method forwards the call to the underlying <code><a href="../Wakame/Lib/DictionaryInfoT.html">Wakame::Lib::DictionaryInfoT</a></code> structure.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(pointer:Pointer(Lib::DictionaryInfoT))-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(pointer : Pointer(<a href="../Wakame/Lib/DictionaryInfoT.html">Lib::DictionaryInfoT</a>))
+
+        <a class="method-permalink" href="#new%28pointer%3APointer%28Lib%3A%3ADictionaryInfoT%29%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="charset:String-instance-method">
+      <div class="signature">
+        
+        def <strong>charset</strong> : String
+
+        <a class="method-permalink" href="#charset%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Character set of the dictionary.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="filename:String-instance-method">
+      <div class="signature">
+        
+        def <strong>filename</strong> : String
+
+        <a class="method-permalink" href="#filename%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Filename of the dictionary.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="lsize:UInt32-instance-method">
+      <div class="signature">
+        
+        def <strong>lsize</strong> : UInt32
+
+        <a class="method-permalink" href="#lsize%3AUInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>This method forwards the call to the underlying <code><a href="../Wakame/Lib/DictionaryInfoT.html">Wakame::Lib::DictionaryInfoT</a></code> structure.</p>
+<p>See <code><a href="../Wakame/Lib/DictionaryInfoT.html#lsize%3AUInt32-instance-method">Wakame::Lib::DictionaryInfoT#lsize</a></code> for details.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="next:DictionaryInfo?-instance-method">
+      <div class="signature">
+        
+        def <strong>next</strong> : <a href="../Wakame/DictionaryInfo.html">DictionaryInfo</a>?
+
+        <a class="method-permalink" href="#next%3ADictionaryInfo%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>This method forwards the call to the underlying <code><a href="../Wakame/Lib/DictionaryInfoT.html">Wakame::Lib::DictionaryInfoT</a></code> structure,
+resolves the pointer returned, and returns the wrapped variant of it.</p>
+<p>See <code><a href="../Wakame/Lib/DictionaryInfoT.html#next%3APointer%28Wakame%3A%3ALib%3A%3ADictionaryInfoT%29-instance-method">Wakame::Lib::DictionaryInfoT#next</a></code> for details on the underlying value.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pointer:Pointer(Wakame::Lib::DictionaryInfoT)-instance-method">
+      <div class="signature">
+        
+        def <strong>pointer</strong> : Pointer(<a href="../Wakame/Lib/DictionaryInfoT.html">Wakame::Lib::DictionaryInfoT</a>)
+
+        <a class="method-permalink" href="#pointer%3APointer%28Wakame%3A%3ALib%3A%3ADictionaryInfoT%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Pointer to the underlying structure.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="rsize:UInt32-instance-method">
+      <div class="signature">
+        
+        def <strong>rsize</strong> : UInt32
+
+        <a class="method-permalink" href="#rsize%3AUInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>This method forwards the call to the underlying <code><a href="../Wakame/Lib/DictionaryInfoT.html">Wakame::Lib::DictionaryInfoT</a></code> structure.</p>
+<p>See <code><a href="../Wakame/Lib/DictionaryInfoT.html#rsize%3AUInt32-instance-method">Wakame::Lib::DictionaryInfoT#rsize</a></code> for details.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="size:UInt32-instance-method">
+      <div class="signature">
+        
+        def <strong>size</strong> : UInt32
+
+        <a class="method-permalink" href="#size%3AUInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>This method forwards the call to the underlying <code><a href="../Wakame/Lib/DictionaryInfoT.html">Wakame::Lib::DictionaryInfoT</a></code> structure.</p>
+<p>See <code><a href="../Wakame/Lib/DictionaryInfoT.html#size%3AUInt32-instance-method">Wakame::Lib::DictionaryInfoT#size</a></code> for details.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="system_dic?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>system_dic?</strong> : Bool
+
+        <a class="method-permalink" href="#system_dic%3F%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Calls <code><a href="../Wakame/DictionaryInfo/DictionaryType.html#system_dic%3F-instance-method">DictionaryType#system_dic?</a></code> of the <code><a href="../Wakame/DictionaryInfo.html#type%3AWakame%3A%3ADictionaryInfo%3A%3ADictionaryType-instance-method">#type</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="type:Wakame::DictionaryInfo::DictionaryType-instance-method">
+      <div class="signature">
+        
+        def <strong>type</strong> : <a href="../Wakame/DictionaryInfo/DictionaryType.html">Wakame::DictionaryInfo::DictionaryType</a>
+
+        <a class="method-permalink" href="#type%3AWakame%3A%3ADictionaryInfo%3A%3ADictionaryType-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Dictionary type.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="unknown_dic?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>unknown_dic?</strong> : Bool
+
+        <a class="method-permalink" href="#unknown_dic%3F%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Calls <code><a href="../Wakame/DictionaryInfo/DictionaryType.html#unknown_dic%3F-instance-method">DictionaryType#unknown_dic?</a></code> of the <code><a href="../Wakame/DictionaryInfo.html#type%3AWakame%3A%3ADictionaryInfo%3A%3ADictionaryType-instance-method">#type</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="user_dic?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>user_dic?</strong> : Bool
+
+        <a class="method-permalink" href="#user_dic%3F%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Calls <code><a href="../Wakame/DictionaryInfo/DictionaryType.html#user_dic%3F-instance-method">DictionaryType#user_dic?</a></code> of the <code><a href="../Wakame/DictionaryInfo.html#type%3AWakame%3A%3ADictionaryInfo%3A%3ADictionaryType-instance-method">#type</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="version:UInt16-instance-method">
+      <div class="signature">
+        
+        def <strong>version</strong> : UInt16
+
+        <a class="method-permalink" href="#version%3AUInt16-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>This method forwards the call to the underlying <code><a href="../Wakame/Lib/DictionaryInfoT.html">Wakame::Lib::DictionaryInfoT</a></code> structure.</p>
+<p>See <code><a href="../Wakame/Lib/DictionaryInfoT.html#version%3AUInt16-instance-method">Wakame::Lib::DictionaryInfoT#version</a></code> for details.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
