@@ -79,7 +79,7 @@ module Wakame
       end
     end
 
-    def build_str
+    protected def build_str
       names = {{ @type.instance_vars.map &.name.stringify }}
       values = {{ @type.instance_vars }}
 

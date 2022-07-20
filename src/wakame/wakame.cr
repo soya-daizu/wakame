@@ -2,7 +2,7 @@ require "./**"
 
 module Wakame
   class MeCab
-    macro handle_lattice_error
+    private macro handle_lattice_error
       message = String.new(LibMeCab.lattice_strerror(@lattice))
       raise ex if message.empty?
       raise WakameError.new(message)
@@ -50,7 +50,7 @@ module Wakame
       @version = LibMeCab.version
     end
 
-    def check(eval, message)
+    private def check(eval, message)
       return if eval
       mecab_message = String.new(LibMeCab.strerror(@tagger)) if @tagger
       raise WakameError.new(message) if !mecab_message || mecab_message.empty?
