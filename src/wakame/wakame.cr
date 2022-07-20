@@ -107,7 +107,7 @@ module Wakame
 
     private def set_boundary_constraints(text : String, constraints : Regex | String)
       tokens = tokenize_by_pattern(text, constraints)
-      text = tokens.map(&.first).join
+      text = tokens.map(&.first).join if !tokens.empty?
       LibMeCab.lattice_set_sentence(@lattice, text)
 
       bpos = 0
@@ -127,7 +127,7 @@ module Wakame
 
     private def set_feature_constraints(text : String, constraints : Hash(String, String))
       tokens = tokenize_by_features(text, constraints.keys)
-      text = tokens.map(&.first).join
+      text = tokens.map(&.first).join if !tokens.empty?
       LibMeCab.lattice_set_sentence(@lattice, text)
 
       bpos = 0
