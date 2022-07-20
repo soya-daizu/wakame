@@ -43,8 +43,8 @@ module Wakame
 
       @dicts = [] of DictionaryInfo
       @dicts << DictionaryInfo.new(LibMeCab.model_dictionary_info(@model))
-      while @dicts.last.next
-        @dicts << DictionaryInfo.new(@dicts.last.next)
+      while next_dic = @dicts.last.next
+        @dicts << next_dic
       end
 
       @version = LibMeCab.version
@@ -164,10 +164,9 @@ module Wakame
         next unless LibMeCab.lattice_next(@lattice)
         node_ptr = LibMeCab.lattice_get_bos_node(@lattice)
         while node_ptr
-          formatted = LibMeCab.format_node(@tagger, node_ptr)
-          node = MeCabNode.new(node_ptr, formatted)
+          node = MeCabNode.new(node_ptr, @tagger)
           yield node
-          node_ptr = node.next
+          node_ptr = node_ptr.value.next
         end
       end
     end
