@@ -1,26 +1,47 @@
 require "option_parser"
 
 module Wakame
+  # Struct that represents a collection of options to pass to the Wakame::MeCab object.
   struct Options
+    # resource file
     getter rcfile : String?
+    # directory of the system dictionary
     getter dicdir : String?
+    # path to the user dictionary
     getter userdic : String?
+    # lattice information level (DEPRECATED)
     getter lattice_level : Int32?
+    # output format type (wakati, chasen, yomi, etc.)
     getter output_format_type : String?
+    # output all morphs (default false)
     getter all_morphs : Bool?
+    # output N best results (default 1)
     getter nbest : Int32?
+    # partial parsing mode (default false)
     getter partial : Bool?
+    # output marginal probability (default false)
     getter marginal : Bool?
+    # maximum grouping size for unknown words (default 24)
     getter max_grouping_size : Int32?
+    # user-defined node format
     getter node_format : String?
+    # user-defined unknown node format
     getter unk_format : String?
+    # user-defined beginning-of-sentence format
     getter bos_format : String?
+    # user-defined end-of-sentence format
     getter eos_format : String?
+    # user-defined end-of-NBest format
     getter eon_format : String?
+    # feature for unknown word
     getter unk_feature : String?
+    # input buffer size (default 8192)
     getter input_buffer_size : Int32?
+    # allocate new memory for input sentence
     getter allocate_sentence : Bool?
+    # set temparature parameter theta (default 0.75)
     getter theta : Float32?
+    # set cost factor (default 700)
     getter cost_factor : Int32?
 
     protected setter(
@@ -34,6 +55,13 @@ module Wakame
     )
 
     # Creates a new options object with the given command-line style option arguments.
+    #
+    # ```
+    # options = Wakame::Options.new("-F %pS%f[7]\\s -E \\0")
+    # mecab = Wakame::MeCab.new(options)
+    # puts mecab.parse("吾輩は猫である。名前はまだ無い。")
+    # # => ワガハイ ハ ネコ デ アル 。 ナマエ ハ マダ ナイ 。
+    # ```
     def self.new(option_str : String)
       options = self.new
 
@@ -69,7 +97,14 @@ module Wakame
     end
 
     # Creates a new object that represents a collection of the given option arguments
-    # to pass to the Wakame::MeCab object.
+    # to pass to the `Wakame::MeCab` object.
+    #
+    # ```
+    # options = Wakame::Options.new(node_format: "%pS%f[7]\\s", eos_format: "\\0")
+    # mecab = Wakame::MeCab.new(options)
+    # puts mecab.parse("吾輩は猫である。名前はまだ無い。")
+    # # => ワガハイ ハ ネコ デ アル 。 ナマエ ハ マダ ナイ 。
+    # ```
     def initialize(@rcfile = nil, @dicdir = nil, @userdic = nil,
                    @lattice_level = nil, @output_format_type = nil, @all_morphs = nil,
                    @nbest = nil, @partial = nil, @marginal = nil,
