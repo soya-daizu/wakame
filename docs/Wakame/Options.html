@@ -121,6 +121,11 @@
       
     </li>
   
+  <li class=" " data-id="wakame/Wakame/MeCabStruct" data-name="wakame::mecabstruct">
+      <a href="../Wakame/MeCabStruct.html">MeCabStruct</a>
+      
+    </li>
+  
   <li class=" current" data-id="wakame/Wakame/Options" data-name="wakame::options">
       <a href="../Wakame/Options.html">Options</a>
       
@@ -128,11 +133,6 @@
   
   <li class=" " data-id="wakame/Wakame/WakameError" data-name="wakame::wakameerror">
       <a href="../Wakame/WakameError.html">WakameError</a>
-      
-    </li>
-  
-  <li class=" " data-id="wakame/Wakame/WrappingStruct" data-name="wakame::wrappingstruct">
-      <a href="../Wakame/WrappingStruct.html">WrappingStruct</a>
       
     </li>
   
@@ -159,6 +159,17 @@
 
 
 
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>Struct that represents a collection of options to pass to the Wakame::MeCab object.</p>
 
 
 
@@ -212,7 +223,7 @@
       <li class="entry-summary">
         <a href="#new%28rcfile%3AString%3F%3Dnil%2Cdicdir%3AString%3F%3Dnil%2Cuserdic%3AString%3F%3Dnil%2Clattice_level%3AInt32%3F%3Dnil%2Coutput_format_type%3AString%3F%3Dnil%2Call_morphs%3ABool%3F%3Dnil%2Cnbest%3AInt32%3F%3Dnil%2Cpartial%3ABool%3F%3Dnil%2Cmarginal%3ABool%3F%3Dnil%2Cmax_grouping_size%3AInt32%3F%3Dnil%2Cnode_format%3AString%3F%3Dnil%2Cunk_format%3AString%3F%3Dnil%2Cbos_format%3AString%3F%3Dnil%2Ceos_format%3AString%3F%3Dnil%2Ceon_format%3AString%3F%3Dnil%2Cunk_feature%3AString%3F%3Dnil%2Cinput_buffer_size%3AInt32%3F%3Dnil%2Callocate_sentence%3ABool%3F%3Dnil%2Ctheta%3AFloat32%3F%3Dnil%2Ccost_factor%3AInt32%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(rcfile : String? = <span class="n">nil</span>, dicdir : String? = <span class="n">nil</span>, userdic : String? = <span class="n">nil</span>, lattice_level : Int32? = <span class="n">nil</span>, output_format_type : String? = <span class="n">nil</span>, all_morphs : Bool? = <span class="n">nil</span>, nbest : Int32? = <span class="n">nil</span>, partial : Bool? = <span class="n">nil</span>, marginal : Bool? = <span class="n">nil</span>, max_grouping_size : Int32? = <span class="n">nil</span>, node_format : String? = <span class="n">nil</span>, unk_format : String? = <span class="n">nil</span>, bos_format : String? = <span class="n">nil</span>, eos_format : String? = <span class="n">nil</span>, eon_format : String? = <span class="n">nil</span>, unk_feature : String? = <span class="n">nil</span>, input_buffer_size : Int32? = <span class="n">nil</span>, allocate_sentence : Bool? = <span class="n">nil</span>, theta : Float32? = <span class="n">nil</span>, cost_factor : Int32? = <span class="n">nil</span>)</a>
         
-          <div class="summary"><p>Creates a new object that represents a collection of the given option arguments to pass to the Wakame::MeCab object.</p></div>
+          <div class="summary"><p>Creates a new object that represents a collection of the given option arguments to pass to the <code><a href="../Wakame/MeCab.html">Wakame::MeCab</a></code> object.</p></div>
         
       </li>
     
@@ -235,100 +246,140 @@
       <li class="entry-summary">
         <a href="#all_morphs%3ABool%3F-instance-method" class="signature"><strong>#all_morphs</strong> : Bool?</a>
         
+          <div class="summary"><p>output all morphs (default false)</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#allocate_sentence%3ABool%3F-instance-method" class="signature"><strong>#allocate_sentence</strong> : Bool?</a>
+        
+          <div class="summary"><p>allocate new memory for input sentence</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#bos_format%3AString%3F-instance-method" class="signature"><strong>#bos_format</strong> : String?</a>
         
+          <div class="summary"><p>user-defined beginning-of-sentence format</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#cost_factor%3AInt32%3F-instance-method" class="signature"><strong>#cost_factor</strong> : Int32?</a>
+        
+          <div class="summary"><p>set cost factor (default 700)</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#dicdir%3AString%3F-instance-method" class="signature"><strong>#dicdir</strong> : String?</a>
         
+          <div class="summary"><p>directory of the system dictionary</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#eon_format%3AString%3F-instance-method" class="signature"><strong>#eon_format</strong> : String?</a>
+        
+          <div class="summary"><p>user-defined end-of-NBest format</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#eos_format%3AString%3F-instance-method" class="signature"><strong>#eos_format</strong> : String?</a>
         
+          <div class="summary"><p>user-defined end-of-sentence format</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#input_buffer_size%3AInt32%3F-instance-method" class="signature"><strong>#input_buffer_size</strong> : Int32?</a>
+        
+          <div class="summary"><p>input buffer size (default 8192)</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#lattice_level%3AInt32%3F-instance-method" class="signature"><strong>#lattice_level</strong> : Int32?</a>
         
+          <div class="summary"><p>lattice information level (DEPRECATED)</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#marginal%3ABool%3F-instance-method" class="signature"><strong>#marginal</strong> : Bool?</a>
+        
+          <div class="summary"><p>output marginal probability (default false)</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#max_grouping_size%3AInt32%3F-instance-method" class="signature"><strong>#max_grouping_size</strong> : Int32?</a>
         
+          <div class="summary"><p>maximum grouping size for unknown words (default 24)</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#nbest%3AInt32%3F-instance-method" class="signature"><strong>#nbest</strong> : Int32?</a>
+        
+          <div class="summary"><p>output N best results (default 1)</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#node_format%3AString%3F-instance-method" class="signature"><strong>#node_format</strong> : String?</a>
         
+          <div class="summary"><p>user-defined node format</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#output_format_type%3AString%3F-instance-method" class="signature"><strong>#output_format_type</strong> : String?</a>
+        
+          <div class="summary"><p>output format type (wakati, chasen, yomi, etc.)</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#partial%3ABool%3F-instance-method" class="signature"><strong>#partial</strong> : Bool?</a>
         
+          <div class="summary"><p>partial parsing mode (default false)</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#rcfile%3AString%3F-instance-method" class="signature"><strong>#rcfile</strong> : String?</a>
+        
+          <div class="summary"><p>resource file</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#theta%3AFloat32%3F-instance-method" class="signature"><strong>#theta</strong> : Float32?</a>
         
+          <div class="summary"><p>set temparature parameter theta (default 0.75)</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#unk_feature%3AString%3F-instance-method" class="signature"><strong>#unk_feature</strong> : String?</a>
+        
+          <div class="summary"><p>feature for unknown word</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#unk_format%3AString%3F-instance-method" class="signature"><strong>#unk_format</strong> : String?</a>
         
+          <div class="summary"><p>user-defined unknown node format</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#userdic%3AString%3F-instance-method" class="signature"><strong>#userdic</strong> : String?</a>
+        
+          <div class="summary"><p>path to the user dictionary</p></div>
         
       </li>
     
@@ -393,6 +444,10 @@
         <div class="doc">
           
           <p>Creates a new options object with the given command-line style option arguments.</p>
+<pre><code class="language-crystal">options <span class="o">=</span> <span class="t">Wakame</span><span class="t">::</span><span class="t">Options</span>.<span class="k">new</span>(<span class="s">&quot;-F %pS%f[7]\\s -E \\0&quot;</span>)
+mecab <span class="o">=</span> <span class="t">Wakame</span><span class="t">::</span><span class="t">MeCab</span>.<span class="k">new</span>(options)
+puts mecab.parse(<span class="s">&quot;吾輩は猫である。名前はまだ無い。&quot;</span>)
+<span class="c"># =&gt; ワガハイ ハ ネコ デ アル 。 ナマエ ハ マダ ナイ 。</span></code></pre>
         </div>
       
       <br/>
@@ -412,7 +467,11 @@
         <div class="doc">
           
           <p>Creates a new object that represents a collection of the given option arguments
-to pass to the Wakame::MeCab object.</p>
+to pass to the <code><a href="../Wakame/MeCab.html">Wakame::MeCab</a></code> object.</p>
+<pre><code class="language-crystal">options <span class="o">=</span> <span class="t">Wakame</span><span class="t">::</span><span class="t">Options</span>.<span class="k">new</span>(node_format: <span class="s">&quot;%pS%f[7]\\s&quot;</span>, eos_format: <span class="s">&quot;\\0&quot;</span>)
+mecab <span class="o">=</span> <span class="t">Wakame</span><span class="t">::</span><span class="t">MeCab</span>.<span class="k">new</span>(options)
+puts mecab.parse(<span class="s">&quot;吾輩は猫である。名前はまだ無い。&quot;</span>)
+<span class="c"># =&gt; ワガハイ ハ ネコ デ アル 。 ナマエ ハ マダ ナイ 。</span></code></pre>
         </div>
       
       <br/>
@@ -443,6 +502,11 @@ to pass to the Wakame::MeCab object.</p>
         <a class="method-permalink" href="#all_morphs%3ABool%3F-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>output all morphs (default false)</p>
+        </div>
+      
       <br/>
       <div>
         
@@ -456,6 +520,11 @@ to pass to the Wakame::MeCab object.</p>
 
         <a class="method-permalink" href="#allocate_sentence%3ABool%3F-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+          <p>allocate new memory for input sentence</p>
+        </div>
       
       <br/>
       <div>
@@ -471,6 +540,11 @@ to pass to the Wakame::MeCab object.</p>
         <a class="method-permalink" href="#bos_format%3AString%3F-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>user-defined beginning-of-sentence format</p>
+        </div>
+      
       <br/>
       <div>
         
@@ -484,6 +558,11 @@ to pass to the Wakame::MeCab object.</p>
 
         <a class="method-permalink" href="#cost_factor%3AInt32%3F-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+          <p>set cost factor (default 700)</p>
+        </div>
       
       <br/>
       <div>
@@ -499,6 +578,11 @@ to pass to the Wakame::MeCab object.</p>
         <a class="method-permalink" href="#dicdir%3AString%3F-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>directory of the system dictionary</p>
+        </div>
+      
       <br/>
       <div>
         
@@ -512,6 +596,11 @@ to pass to the Wakame::MeCab object.</p>
 
         <a class="method-permalink" href="#eon_format%3AString%3F-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+          <p>user-defined end-of-NBest format</p>
+        </div>
       
       <br/>
       <div>
@@ -527,6 +616,11 @@ to pass to the Wakame::MeCab object.</p>
         <a class="method-permalink" href="#eos_format%3AString%3F-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>user-defined end-of-sentence format</p>
+        </div>
+      
       <br/>
       <div>
         
@@ -540,6 +634,11 @@ to pass to the Wakame::MeCab object.</p>
 
         <a class="method-permalink" href="#input_buffer_size%3AInt32%3F-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+          <p>input buffer size (default 8192)</p>
+        </div>
       
       <br/>
       <div>
@@ -555,6 +654,11 @@ to pass to the Wakame::MeCab object.</p>
         <a class="method-permalink" href="#lattice_level%3AInt32%3F-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>lattice information level (DEPRECATED)</p>
+        </div>
+      
       <br/>
       <div>
         
@@ -568,6 +672,11 @@ to pass to the Wakame::MeCab object.</p>
 
         <a class="method-permalink" href="#marginal%3ABool%3F-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+          <p>output marginal probability (default false)</p>
+        </div>
       
       <br/>
       <div>
@@ -583,6 +692,11 @@ to pass to the Wakame::MeCab object.</p>
         <a class="method-permalink" href="#max_grouping_size%3AInt32%3F-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>maximum grouping size for unknown words (default 24)</p>
+        </div>
+      
       <br/>
       <div>
         
@@ -596,6 +710,11 @@ to pass to the Wakame::MeCab object.</p>
 
         <a class="method-permalink" href="#nbest%3AInt32%3F-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+          <p>output N best results (default 1)</p>
+        </div>
       
       <br/>
       <div>
@@ -611,6 +730,11 @@ to pass to the Wakame::MeCab object.</p>
         <a class="method-permalink" href="#node_format%3AString%3F-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>user-defined node format</p>
+        </div>
+      
       <br/>
       <div>
         
@@ -624,6 +748,11 @@ to pass to the Wakame::MeCab object.</p>
 
         <a class="method-permalink" href="#output_format_type%3AString%3F-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+          <p>output format type (wakati, chasen, yomi, etc.)</p>
+        </div>
       
       <br/>
       <div>
@@ -639,6 +768,11 @@ to pass to the Wakame::MeCab object.</p>
         <a class="method-permalink" href="#partial%3ABool%3F-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>partial parsing mode (default false)</p>
+        </div>
+      
       <br/>
       <div>
         
@@ -652,6 +786,11 @@ to pass to the Wakame::MeCab object.</p>
 
         <a class="method-permalink" href="#rcfile%3AString%3F-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+          <p>resource file</p>
+        </div>
       
       <br/>
       <div>
@@ -667,6 +806,11 @@ to pass to the Wakame::MeCab object.</p>
         <a class="method-permalink" href="#theta%3AFloat32%3F-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>set temparature parameter theta (default 0.75)</p>
+        </div>
+      
       <br/>
       <div>
         
@@ -680,6 +824,11 @@ to pass to the Wakame::MeCab object.</p>
 
         <a class="method-permalink" href="#unk_feature%3AString%3F-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+          <p>feature for unknown word</p>
+        </div>
       
       <br/>
       <div>
@@ -695,6 +844,11 @@ to pass to the Wakame::MeCab object.</p>
         <a class="method-permalink" href="#unk_format%3AString%3F-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>user-defined unknown node format</p>
+        </div>
+      
       <br/>
       <div>
         
@@ -708,6 +862,11 @@ to pass to the Wakame::MeCab object.</p>
 
         <a class="method-permalink" href="#userdic%3AString%3F-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+          <p>path to the user dictionary</p>
+        </div>
       
       <br/>
       <div>
