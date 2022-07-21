@@ -1,11 +1,11 @@
 require "./lib/*"
-require "./wrapping_struct"
+require "./mecab_struct"
 
 module Wakame
   # Wrapper for the `Wakame::Lib::DictionaryInfoT` structure
   # holding informations of a dictionary.
   struct DictionaryInfo
-    include WrappingStruct
+    include MeCabStruct
 
     enum DictionaryType
       SystemDic  = LibMeCab::SysDic

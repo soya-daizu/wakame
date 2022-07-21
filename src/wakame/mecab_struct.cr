@@ -1,6 +1,6 @@
 module Wakame
   # Internal module which is shared across the wrapper structs.
-  module WrappingStruct
+  module MeCabStruct
     private macro resolve_pointers(*names, of base_type, as dest_type)
       {% for name in names %}
         # This method forwards the call to the underlying `{{base_type.resolve}}` structure,

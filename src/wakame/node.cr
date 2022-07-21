@@ -1,11 +1,11 @@
 require "./lib/*"
-require "./wrapping_struct"
+require "./mecab_struct"
 
 module Wakame
   # Wrapper for the `Wakame::Lib::MeCabNodeT` structure
   # holding attributes of the parsed node.
   struct MeCabNode
-    include WrappingStruct
+    include MeCabStruct
 
     enum NodeStatus
       NormalNode  = LibMeCab::NorNode

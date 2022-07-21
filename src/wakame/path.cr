@@ -1,10 +1,10 @@
 require "./lib/*"
-require "./wrapping_struct"
+require "./mecab_struct"
 
 module Wakame
   # Wrapper for the `Wakame::Lib::MeCabNodeT` structure.
   struct MeCabPath
-    include WrappingStruct
+    include MeCabStruct
 
     # Pointer to the underlying structure.
     getter pointer
