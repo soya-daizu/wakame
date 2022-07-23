@@ -5,7 +5,9 @@ authors:
   - soya_daizu <soya_daizu@protonmail.com>
 
 targets:
-  example_direct_usage:
+  sample:
+    main: examples/sample.cr
+  direct_usage:
     main: examples/direct_usage.cr
 
 crystal: 1.5.0
