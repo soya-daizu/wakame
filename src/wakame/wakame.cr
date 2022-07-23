@@ -160,7 +160,7 @@ module Wakame
     # #    人      名詞,接尾,一般,*,*,*,人,ジン,ジン
     # #    参政    名詞,サ変接続,*,*,*,*,参政,サンセイ,サンセイ
     # #    権      名詞,接尾,一般,*,*,*,権,ケン,ケン
-    # EOS
+    # #    EOS
     # ```
     def parse(text : String, boundary_constraints : Regex | String)
       set_boundary_constraints(text, boundary_constraints)
@@ -196,14 +196,15 @@ module Wakame
     # #    ちゃん  名詞,接尾,人名,*,*,*,ちゃん,チャン,チャン
     # #    ドロップキーック        名詞,一般,*,*,*,*,*
     # #    ！      記号,一般,*,*,*,*,！,！,！
-    # EOS
+    # #    EOS
+    #
     # # Giving MeCab hints with feature constraints
     # puts mecab.parse("邪神ちゃんドロップキーック！", {"邪神ちゃん" => "*", "キーック" => "*"})
     # # => 邪神ちゃん      名詞,一般,*,*,*,*,*
     # #    ドロップ        名詞,一般,*,*,*,*,ドロップ,ドロップ,ドロップ
     # #    キーック        名詞,一般,*,*,*,*,*
     # #    ！      記号,一般,*,*,*,*,！,！,！
-    # EOS
+    # #    EOS
     # ```
     def parse(text : String, feature_constraints : Hash(String, String))
       set_feature_constraints(text, feature_constraints)
